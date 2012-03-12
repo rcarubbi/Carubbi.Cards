@@ -1,0 +1,11 @@
+C:\Documents and Settings\Raphael\My Documents\Visual Studio 2008\Projects\Carubbi.Cards\Carubbi.Cards.Test.UI\bin\Debug\Carubbi.Cards.Test.UI.exe.config
+C:\Documents and Settings\Raphael\My Documents\Visual Studio 2008\Projects\Carubbi.Cards\Carubbi.Cards.Test.UI\bin\Debug\Carubbi.Cards.Test.UI.exe
+C:\Documents and Settings\Raphael\My Documents\Visual Studio 2008\Projects\Carubbi.Cards\Carubbi.Cards.Test.UI\bin\Debug\Carubbi.Cards.Test.UI.pdb
+C:\Documents and Settings\Raphael\My Documents\Visual Studio 2008\Projects\Carubbi.Cards\Carubbi.Cards.Test.UI\bin\Debug\Carubbi.Cards.dll
+C:\Documents and Settings\Raphael\My Documents\Visual Studio 2008\Projects\Carubbi.Cards\Carubbi.Cards.Test.UI\bin\Debug\Carubbi.Cards.pdb
+C:\Documents and Settings\Raphael\My Documents\Visual Studio 2008\Projects\Carubbi.Cards\Carubbi.Cards.Test.UI\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Raphael\My Documents\Visual Studio 2008\Projects\Carubbi.Cards\Carubbi.Cards.Test.UI\obj\x86\Debug\Carubbi.Cards.Test.UI.frmTests.resources
+C:\Documents and Settings\Raphael\My Documents\Visual Studio 2008\Projects\Carubbi.Cards\Carubbi.Cards.Test.UI\obj\x86\Debug\Carubbi.Cards.Test.UI.Properties.Resources.resources
+C:\Documents and Settings\Raphael\My Documents\Visual Studio 2008\Projects\Carubbi.Cards\Carubbi.Cards.Test.UI\obj\x86\Debug\Carubbi.Cards.Test.UI.csproj.GenerateResource.Cache
+C:\Documents and Settings\Raphael\My Documents\Visual Studio 2008\Projects\Carubbi.Cards\Carubbi.Cards.Test.UI\obj\x86\Debug\Carubbi.Cards.Test.UI.exe
+C:\Documents and Settings\Raphael\My Documents\Visual Studio 2008\Projects\Carubbi.Cards\Carubbi.Cards.Test.UI\obj\x86\Debug\Carubbi.Cards.Test.UI.pdb

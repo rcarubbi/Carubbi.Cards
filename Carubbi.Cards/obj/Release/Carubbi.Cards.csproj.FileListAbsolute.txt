@@ -1,0 +1,7 @@
+C:\Documents and Settings\Raphael\My Documents\Visual Studio 2008\Projects\Carubbi.Cards\Carubbi.Cards\bin\Release\Carubbi.Cards.dll
+C:\Documents and Settings\Raphael\My Documents\Visual Studio 2008\Projects\Carubbi.Cards\Carubbi.Cards\bin\Release\Carubbi.Cards.pdb
+C:\Documents and Settings\Raphael\My Documents\Visual Studio 2008\Projects\Carubbi.Cards\Carubbi.Cards\obj\Release\ResolveAssemblyReference.cache
+C:\Documents and Settings\Raphael\My Documents\Visual Studio 2008\Projects\Carubbi.Cards\Carubbi.Cards\obj\Release\Carubbi.Cards.Resources.resources
+C:\Documents and Settings\Raphael\My Documents\Visual Studio 2008\Projects\Carubbi.Cards\Carubbi.Cards\obj\Release\Carubbi.Cards.csproj.GenerateResource.Cache
+C:\Documents and Settings\Raphael\My Documents\Visual Studio 2008\Projects\Carubbi.Cards\Carubbi.Cards\obj\Release\Carubbi.Cards.dll
+C:\Documents and Settings\Raphael\My Documents\Visual Studio 2008\Projects\Carubbi.Cards\Carubbi.Cards\obj\Release\Carubbi.Cards.pdb

@@ -1,0 +1,6 @@
+C:\Documents and Settings\Raphael\My Documents\Visual Studio 2008\Projects\Carubbi.Cards\PokerService\bin\Release\Carubbi.PokerService.dll.config
+C:\Documents and Settings\Raphael\My Documents\Visual Studio 2008\Projects\Carubbi.Cards\PokerService\bin\Release\Carubbi.PokerService.dll
+C:\Documents and Settings\Raphael\My Documents\Visual Studio 2008\Projects\Carubbi.Cards\PokerService\bin\Release\Carubbi.PokerService.pdb
+C:\Documents and Settings\Raphael\My Documents\Visual Studio 2008\Projects\Carubbi.Cards\PokerService\obj\Release\ResolveAssemblyReference.cache
+C:\Documents and Settings\Raphael\My Documents\Visual Studio 2008\Projects\Carubbi.Cards\PokerService\obj\Release\Carubbi.PokerService.dll
+C:\Documents and Settings\Raphael\My Documents\Visual Studio 2008\Projects\Carubbi.Cards\PokerService\obj\Release\Carubbi.PokerService.pdb

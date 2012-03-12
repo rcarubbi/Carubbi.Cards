@@ -1,0 +1,5 @@
+C:\Documents and Settings\Raphael\My Documents\Visual Studio 2008\Projects\Carubbi.Cards\Carubbi.PokerService\bin\Debug\Carubbi.PokerServices.dll
+C:\Documents and Settings\Raphael\My Documents\Visual Studio 2008\Projects\Carubbi.Cards\Carubbi.PokerService\bin\Debug\Carubbi.PokerServices.pdb
+C:\Documents and Settings\Raphael\My Documents\Visual Studio 2008\Projects\Carubbi.Cards\Carubbi.PokerService\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Raphael\My Documents\Visual Studio 2008\Projects\Carubbi.Cards\Carubbi.PokerService\obj\Debug\Carubbi.PokerServices.dll
+C:\Documents and Settings\Raphael\My Documents\Visual Studio 2008\Projects\Carubbi.Cards\Carubbi.PokerService\obj\Debug\Carubbi.PokerServices.pdb

@@ -1,0 +1,14 @@
+C:\Documents and Settings\Raphael\My Documents\Visual Studio 2008\Projects\Carubbi.Cards\Carubbi.SlotCard\bin\Release\Carubbi.SlotCard.dll
+C:\Documents and Settings\Raphael\My Documents\Visual Studio 2008\Projects\Carubbi.Cards\Carubbi.SlotCard\bin\Release\Carubbi.SlotCard.pdb
+C:\Documents and Settings\Raphael\My Documents\Visual Studio 2008\Projects\Carubbi.Cards\Carubbi.SlotCard\bin\Release\Carubbi.Cards.dll
+C:\Documents and Settings\Raphael\My Documents\Visual Studio 2008\Projects\Carubbi.Cards\Carubbi.SlotCard\bin\Release\Carubbi.Cards.pdb
+C:\Documents and Settings\Raphael\My Documents\Visual Studio 2008\Projects\Carubbi.Cards\Carubbi.SlotCard\obj\Release\ResolveAssemblyReference.cache
+C:\Documents and Settings\Raphael\My Documents\Visual Studio 2008\Projects\Carubbi.Cards\Carubbi.SlotCard\obj\Release\Carubbi.SlotCard.dll
+C:\Documents and Settings\Raphael\My Documents\Visual Studio 2008\Projects\Carubbi.Cards\Carubbi.SlotCard\obj\Release\Carubbi.SlotCard.pdb
+D:\Projects\Carubbi.Cards\Carubbi.SlotCard\bin\Release\Carubbi.SlotCard.dll
+D:\Projects\Carubbi.Cards\Carubbi.SlotCard\bin\Release\Carubbi.SlotCard.pdb
+D:\Projects\Carubbi.Cards\Carubbi.SlotCard\bin\Release\Carubbi.Cards.dll
+D:\Projects\Carubbi.Cards\Carubbi.SlotCard\bin\Release\Carubbi.Cards.pdb
+D:\Projects\Carubbi.Cards\Carubbi.SlotCard\obj\Release\ResolveAssemblyReference.cache
+D:\Projects\Carubbi.Cards\Carubbi.SlotCard\obj\Release\Carubbi.SlotCard.dll
+D:\Projects\Carubbi.Cards\Carubbi.SlotCard\obj\Release\Carubbi.SlotCard.pdb

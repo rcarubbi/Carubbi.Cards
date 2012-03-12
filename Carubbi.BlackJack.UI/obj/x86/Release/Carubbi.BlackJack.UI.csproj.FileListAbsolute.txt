@@ -1,0 +1,13 @@
+C:\Documents and Settings\Raphael\My Documents\Visual Studio 2008\Projects\Carubbi.Cards\Carubbi.BlackJack.UI\bin\Release\Carubbi.BlackJack.UI.exe.config
+C:\Documents and Settings\Raphael\My Documents\Visual Studio 2008\Projects\Carubbi.Cards\Carubbi.BlackJack.UI\bin\Release\Carubbi.BlackJack.UI.exe
+C:\Documents and Settings\Raphael\My Documents\Visual Studio 2008\Projects\Carubbi.Cards\Carubbi.BlackJack.UI\bin\Release\Carubbi.BlackJack.UI.pdb
+C:\Documents and Settings\Raphael\My Documents\Visual Studio 2008\Projects\Carubbi.Cards\Carubbi.BlackJack.UI\bin\Release\Carubbi.BlackJack.dll
+C:\Documents and Settings\Raphael\My Documents\Visual Studio 2008\Projects\Carubbi.Cards\Carubbi.BlackJack.UI\bin\Release\Carubbi.Cards.dll
+C:\Documents and Settings\Raphael\My Documents\Visual Studio 2008\Projects\Carubbi.Cards\Carubbi.BlackJack.UI\bin\Release\Carubbi.BlackJack.pdb
+C:\Documents and Settings\Raphael\My Documents\Visual Studio 2008\Projects\Carubbi.Cards\Carubbi.BlackJack.UI\bin\Release\Carubbi.Cards.pdb
+C:\Documents and Settings\Raphael\My Documents\Visual Studio 2008\Projects\Carubbi.Cards\Carubbi.BlackJack.UI\obj\x86\Release\ResolveAssemblyReference.cache
+C:\Documents and Settings\Raphael\My Documents\Visual Studio 2008\Projects\Carubbi.Cards\Carubbi.BlackJack.UI\obj\x86\Release\Carubbi.BlackJack.UI.frmGame.resources
+C:\Documents and Settings\Raphael\My Documents\Visual Studio 2008\Projects\Carubbi.Cards\Carubbi.BlackJack.UI\obj\x86\Release\Carubbi.BlackJack.UI.Properties.Resources.resources
+C:\Documents and Settings\Raphael\My Documents\Visual Studio 2008\Projects\Carubbi.Cards\Carubbi.BlackJack.UI\obj\x86\Release\Carubbi.BlackJack.UI.csproj.GenerateResource.Cache
+C:\Documents and Settings\Raphael\My Documents\Visual Studio 2008\Projects\Carubbi.Cards\Carubbi.BlackJack.UI\obj\x86\Release\Carubbi.BlackJack.UI.exe
+C:\Documents and Settings\Raphael\My Documents\Visual Studio 2008\Projects\Carubbi.Cards\Carubbi.BlackJack.UI\obj\x86\Release\Carubbi.BlackJack.UI.pdb
