@@ -24,7 +24,7 @@ namespace Carubbi.SlotCard
 
             if (ContainsStraightFlush(_cardsToAnalyse))
             {
-                PriceName = "Straght Flush";
+                PriceName = "Straight Flush";
                 return PayTable.StraightFlush;
             }
             else if (ContainsFourOfAKind(_cardsToAnalyse))

@@ -65,7 +65,6 @@ namespace Carubbi.SlotCard
             get { return _gamesInDeliverMode; }
         }
 
-
         public bool IsInDeliverMode
         {
             get
@@ -73,7 +72,6 @@ namespace Carubbi.SlotCard
                 return _isInDeliverMode;
             }
         }
-
         private decimal _variantPercent;
 
         internal bool ValidPay(List<Line> lines, int coins, int totalCoinsReceived, int totalCoinsReturneds, decimal percentGain)

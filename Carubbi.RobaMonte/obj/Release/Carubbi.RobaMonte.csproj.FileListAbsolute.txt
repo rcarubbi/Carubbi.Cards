@@ -1,0 +1,10 @@
+C:\Users\rapbbii\Desktop\projetos\Carubbi.Cards\Carubbi.RobaMonte\bin\Release\Carubbi.RobaMonte.exe
+C:\Users\rapbbii\Desktop\projetos\Carubbi.Cards\Carubbi.RobaMonte\bin\Release\Carubbi.RobaMonte.pdb
+C:\Users\rapbbii\Desktop\projetos\Carubbi.Cards\Carubbi.RobaMonte\bin\Release\Carubbi.Cards.dll
+C:\Users\rapbbii\Desktop\projetos\Carubbi.Cards\Carubbi.RobaMonte\bin\Release\Carubbi.Cards.pdb
+C:\Users\rapbbii\Desktop\projetos\Carubbi.Cards\Carubbi.RobaMonte\obj\Release\ResolveAssemblyReference.cache
+C:\Users\rapbbii\Desktop\projetos\Carubbi.Cards\Carubbi.RobaMonte\obj\Release\Carubbi.RobaMonte.frmGame.resources
+C:\Users\rapbbii\Desktop\projetos\Carubbi.Cards\Carubbi.RobaMonte\obj\Release\Carubbi.RobaMonte.Properties.Resources.resources
+C:\Users\rapbbii\Desktop\projetos\Carubbi.Cards\Carubbi.RobaMonte\obj\Release\Carubbi.RobaMonte.csproj.GenerateResource.Cache
+C:\Users\rapbbii\Desktop\projetos\Carubbi.Cards\Carubbi.RobaMonte\obj\Release\Carubbi.RobaMonte.exe
+C:\Users\rapbbii\Desktop\projetos\Carubbi.Cards\Carubbi.RobaMonte\obj\Release\Carubbi.RobaMonte.pdb

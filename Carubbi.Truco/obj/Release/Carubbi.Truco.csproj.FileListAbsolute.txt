@@ -1,0 +1,7 @@
+C:\Users\rapbbii\Desktop\projetos\Carubbi.Cards\Carubbi.Truco\obj\Release\ResolveAssemblyReference.cache
+C:\Users\rapbbii\Desktop\projetos\Carubbi.Cards\Carubbi.Truco\bin\Release\Carubbi.Truco.dll
+C:\Users\rapbbii\Desktop\projetos\Carubbi.Cards\Carubbi.Truco\bin\Release\Carubbi.Truco.pdb
+C:\Users\rapbbii\Desktop\projetos\Carubbi.Cards\Carubbi.Truco\bin\Release\Carubbi.Cards.dll
+C:\Users\rapbbii\Desktop\projetos\Carubbi.Cards\Carubbi.Truco\bin\Release\Carubbi.Cards.pdb
+C:\Users\rapbbii\Desktop\projetos\Carubbi.Cards\Carubbi.Truco\obj\Release\Carubbi.Truco.dll
+C:\Users\rapbbii\Desktop\projetos\Carubbi.Cards\Carubbi.Truco\obj\Release\Carubbi.Truco.pdb

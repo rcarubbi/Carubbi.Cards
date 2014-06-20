@@ -53,6 +53,7 @@ namespace Carubbi.SlotCard
             Roulletes = new List<Roullete>(5);
             for (int i = 0; i < Roulletes.Capacity; i++)
                 Roulletes.Add(new Roullete());
+            
             Random randomTime = new Random();
             Thread.Sleep(randomTime.Next(0, 100));
             _deck1 = new Deck(1, true);
