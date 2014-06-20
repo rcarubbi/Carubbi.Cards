@@ -49,12 +49,12 @@
             this.pnlCards.AutoScroll = true;
             this.pnlCards.Location = new System.Drawing.Point(12, 12);
             this.pnlCards.Name = "pnlCards";
-            this.pnlCards.Size = new System.Drawing.Size(498, 681);
+            this.pnlCards.Size = new System.Drawing.Size(498, 357);
             this.pnlCards.TabIndex = 0;
             // 
             // btnFill
             // 
-            this.btnFill.Location = new System.Drawing.Point(11, 699);
+            this.btnFill.Location = new System.Drawing.Point(12, 375);
             this.btnFill.Name = "btnFill";
             this.btnFill.Size = new System.Drawing.Size(98, 25);
             this.btnFill.TabIndex = 1;
@@ -64,7 +64,7 @@
             // 
             // btnShuffle
             // 
-            this.btnShuffle.Location = new System.Drawing.Point(11, 728);
+            this.btnShuffle.Location = new System.Drawing.Point(12, 404);
             this.btnShuffle.Name = "btnShuffle";
             this.btnShuffle.Size = new System.Drawing.Size(98, 25);
             this.btnShuffle.TabIndex = 2;
@@ -77,12 +77,12 @@
             this.pnlHand.AutoScroll = true;
             this.pnlHand.Location = new System.Drawing.Point(516, 12);
             this.pnlHand.Name = "pnlHand";
-            this.pnlHand.Size = new System.Drawing.Size(450, 681);
+            this.pnlHand.Size = new System.Drawing.Size(450, 357);
             this.pnlHand.TabIndex = 1;
             // 
             // btnQualquer
             // 
-            this.btnQualquer.Location = new System.Drawing.Point(381, 701);
+            this.btnQualquer.Location = new System.Drawing.Point(382, 377);
             this.btnQualquer.Name = "btnQualquer";
             this.btnQualquer.Size = new System.Drawing.Size(75, 23);
             this.btnQualquer.TabIndex = 3;
@@ -92,7 +92,7 @@
             // 
             // btnSobe
             // 
-            this.btnSobe.Location = new System.Drawing.Point(300, 701);
+            this.btnSobe.Location = new System.Drawing.Point(301, 377);
             this.btnSobe.Name = "btnSobe";
             this.btnSobe.Size = new System.Drawing.Size(75, 23);
             this.btnSobe.TabIndex = 4;
@@ -102,7 +102,7 @@
             // 
             // btnGetTop
             // 
-            this.btnGetTop.Location = new System.Drawing.Point(219, 701);
+            this.btnGetTop.Location = new System.Drawing.Point(220, 377);
             this.btnGetTop.Name = "btnGetTop";
             this.btnGetTop.Size = new System.Drawing.Size(75, 23);
             this.btnGetTop.TabIndex = 5;
@@ -112,7 +112,7 @@
             // 
             // btnDe
             // 
-            this.btnDe.Location = new System.Drawing.Point(300, 728);
+            this.btnDe.Location = new System.Drawing.Point(301, 404);
             this.btnDe.Name = "btnDe";
             this.btnDe.Size = new System.Drawing.Size(75, 23);
             this.btnDe.TabIndex = 6;
@@ -122,7 +122,7 @@
             // 
             // btnBaixo
             // 
-            this.btnBaixo.Location = new System.Drawing.Point(810, 701);
+            this.btnBaixo.Location = new System.Drawing.Point(811, 377);
             this.btnBaixo.Name = "btnBaixo";
             this.btnBaixo.Size = new System.Drawing.Size(75, 23);
             this.btnBaixo.TabIndex = 9;
@@ -132,7 +132,7 @@
             // 
             // btnDevolverQualquer
             // 
-            this.btnDevolverQualquer.Location = new System.Drawing.Point(891, 701);
+            this.btnDevolverQualquer.Location = new System.Drawing.Point(892, 377);
             this.btnDevolverQualquer.Name = "btnDevolverQualquer";
             this.btnDevolverQualquer.Size = new System.Drawing.Size(75, 23);
             this.btnDevolverQualquer.TabIndex = 8;
@@ -142,7 +142,7 @@
             // 
             // btnEm
             // 
-            this.btnEm.Location = new System.Drawing.Point(810, 727);
+            this.btnEm.Location = new System.Drawing.Point(811, 403);
             this.btnEm.Name = "btnEm";
             this.btnEm.Size = new System.Drawing.Size(75, 23);
             this.btnEm.TabIndex = 7;
@@ -152,14 +152,14 @@
             // 
             // txtDe
             // 
-            this.txtDe.Location = new System.Drawing.Point(381, 730);
+            this.txtDe.Location = new System.Drawing.Point(382, 406);
             this.txtDe.Name = "txtDe";
             this.txtDe.Size = new System.Drawing.Size(75, 20);
             this.txtDe.TabIndex = 10;
             // 
             // btnCima
             // 
-            this.btnCima.Location = new System.Drawing.Point(729, 701);
+            this.btnCima.Location = new System.Drawing.Point(730, 377);
             this.btnCima.Name = "btnCima";
             this.btnCima.Size = new System.Drawing.Size(75, 23);
             this.btnCima.TabIndex = 11;
@@ -169,7 +169,7 @@
             // 
             // txtEm
             // 
-            this.txtEm.Location = new System.Drawing.Point(891, 729);
+            this.txtEm.Location = new System.Drawing.Point(892, 405);
             this.txtEm.Name = "txtEm";
             this.txtEm.Size = new System.Drawing.Size(75, 20);
             this.txtEm.TabIndex = 12;
@@ -179,7 +179,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkGreen;
-            this.ClientSize = new System.Drawing.Size(978, 762);
+            this.ClientSize = new System.Drawing.Size(978, 443);
             this.Controls.Add(this.txtEm);
             this.Controls.Add(this.btnCima);
             this.Controls.Add(this.btnDe);

@@ -5,3 +5,10 @@ C:\Documents and Settings\Raphael\My Documents\Visual Studio 2008\Projects\Carub
 C:\Documents and Settings\Raphael\My Documents\Visual Studio 2008\Projects\Carubbi.Cards\Carubbi.Cards\obj\Release\Carubbi.Cards.csproj.GenerateResource.Cache
 C:\Documents and Settings\Raphael\My Documents\Visual Studio 2008\Projects\Carubbi.Cards\Carubbi.Cards\obj\Release\Carubbi.Cards.dll
 C:\Documents and Settings\Raphael\My Documents\Visual Studio 2008\Projects\Carubbi.Cards\Carubbi.Cards\obj\Release\Carubbi.Cards.pdb
+C:\Users\Carubbi\Source\Repos\Carubbi.Cards\Carubbi.Cards\bin\Release\Carubbi.Cards.dll
+C:\Users\Carubbi\Source\Repos\Carubbi.Cards\Carubbi.Cards\bin\Release\Carubbi.Cards.pdb
+C:\Users\Carubbi\Source\Repos\Carubbi.Cards\Carubbi.Cards\obj\Release\Carubbi.Cards.csprojResolveAssemblyReference.cache
+C:\Users\Carubbi\Source\Repos\Carubbi.Cards\Carubbi.Cards\obj\Release\Carubbi.Cards.Resources.resources
+C:\Users\Carubbi\Source\Repos\Carubbi.Cards\Carubbi.Cards\obj\Release\Carubbi.Cards.csproj.GenerateResource.Cache
+C:\Users\Carubbi\Source\Repos\Carubbi.Cards\Carubbi.Cards\obj\Release\Carubbi.Cards.dll
+C:\Users\Carubbi\Source\Repos\Carubbi.Cards\Carubbi.Cards\obj\Release\Carubbi.Cards.pdb

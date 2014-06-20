@@ -1,8 +1,6 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.30501.0
-MinimumVisualStudioVersion = 10.0.40219.1
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Carubbi.BlackJack", "Carubbi.BlackJack\Carubbi.BlackJack.csproj", "{56CA6B3A-8300-4DA3-A266-157A54D3EB80}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Carubbi.BlackJack.UI", "Carubbi.BlackJack.UI\Carubbi.BlackJack.UI.csproj", "{734314EE-A90D-4F7A-B874-B5312F47F7DE}"

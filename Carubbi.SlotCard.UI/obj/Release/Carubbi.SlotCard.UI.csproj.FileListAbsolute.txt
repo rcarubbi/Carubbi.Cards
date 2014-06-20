@@ -23,3 +23,5 @@ D:\Projects\Carubbi.Cards\Carubbi.SlotCard.UI\obj\Release\Carubbi.SlotCard.UI.fr
 D:\Projects\Carubbi.Cards\Carubbi.SlotCard.UI\obj\Release\Carubbi.SlotCard.UI.Properties.Resources.resources
 D:\Projects\Carubbi.Cards\Carubbi.SlotCard.UI\obj\Release\ResGen.read.1.tlog
 D:\Projects\Carubbi.Cards\Carubbi.SlotCard.UI\obj\Release\ResGen.write.1.tlog
+C:\Users\Carubbi\Source\Repos\Carubbi.Cards\Carubbi.SlotCard.UI\obj\Release\Carubbi.SlotCard.UI.exe
+C:\Users\Carubbi\Source\Repos\Carubbi.Cards\Carubbi.SlotCard.UI\obj\Release\Carubbi.SlotCard.UI.pdb
