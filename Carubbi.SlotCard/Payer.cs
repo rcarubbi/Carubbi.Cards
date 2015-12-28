@@ -1,7 +1,5 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace Carubbi.SlotCard
 {
@@ -99,38 +97,37 @@ namespace Carubbi.SlotCard
             {
                 if (!_isInDeliverMode)
                 {
-                    if (_gamesInCollectMode == 0)
-                    {
-                        _gamesInDeliverMode = SwapModeCountDown();
-                        GeneratePercentGain(percentGain);
-                        _isInDeliverMode = true;
-                        return true;
-                    }
-                    else
-                    {
-                        return false;
-                    }
+                    return SwitchToDeliveryMode(percentGain);
                 }
                 else
                 {
-                    _gamesInDeliverMode--;
-                    if (_gamesInDeliverMode == 0)
-                    {
-                        _gamesInCollectMode = SwapModeCountDown();
-                        GeneratePercentGain(percentGain);
-                        _isInDeliverMode = false;
-                        return false;
-                    }
-                    else
-                        return true;
+                    return SwitchToCollectMode(percentGain);
                 }
             }
             else if (coinsToPay == 0)
             {
+                if (!_isInDeliverMode)
+                {
+                    SwitchToDeliveryMode(percentGain);
+                }
+                else
+                {
+                    SwitchToCollectMode(percentGain);
+                }
                 return true;
             }
             else
+            {
+                if (!_isInDeliverMode)
+                {
+                    SwitchToDeliveryMode(percentGain);
+                }
+                else
+                {
+                    SwitchToCollectMode(percentGain);
+                }
                 return false;
+            }
         }
 
         private void GeneratePercentGain(decimal percentGain)
@@ -141,6 +138,36 @@ namespace Carubbi.SlotCard
             _variantPercent = rnd.Next(minPercentGain > 0 ? minPercentGain : 0, maxPercentGain);
         }
 
+
+        private bool SwitchToDeliveryMode(decimal percentGain)
+        {
+            if (_gamesInCollectMode == 0)
+            {
+                _gamesInDeliverMode = SwapModeCountDown();
+                GeneratePercentGain(percentGain);
+                _isInDeliverMode = true;
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+
+        private bool SwitchToCollectMode(decimal percentGain)
+        {
+            _gamesInDeliverMode--;
+            if (_gamesInDeliverMode == 0)
+            {
+                _gamesInCollectMode = SwapModeCountDown();
+                GeneratePercentGain(percentGain);
+                _isInDeliverMode = false;
+                return false;
+            }
+            else
+                return true;
+        }
     }
 
 }
