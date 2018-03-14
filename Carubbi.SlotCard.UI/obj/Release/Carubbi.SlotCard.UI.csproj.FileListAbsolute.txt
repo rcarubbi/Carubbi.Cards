@@ -25,3 +25,17 @@ D:\Projects\Carubbi.Cards\Carubbi.SlotCard.UI\obj\Release\ResGen.read.1.tlog
 D:\Projects\Carubbi.Cards\Carubbi.SlotCard.UI\obj\Release\ResGen.write.1.tlog
 C:\Users\Carubbi\Source\Repos\Carubbi.Cards\Carubbi.SlotCard.UI\obj\Release\Carubbi.SlotCard.UI.exe
 C:\Users\Carubbi\Source\Repos\Carubbi.Cards\Carubbi.SlotCard.UI\obj\Release\Carubbi.SlotCard.UI.pdb
+C:\Users\rcaru\projects\Carubbi.Cards\Carubbi.SlotCard.UI\bin\Release\Carubbi.SlotCard.UI.exe.config
+C:\Users\rcaru\projects\Carubbi.Cards\Carubbi.SlotCard.UI\bin\Release\Carubbi.SlotCard.UI.exe
+C:\Users\rcaru\projects\Carubbi.Cards\Carubbi.SlotCard.UI\bin\Release\Carubbi.SlotCard.UI.pdb
+C:\Users\rcaru\projects\Carubbi.Cards\Carubbi.SlotCard.UI\bin\Release\Carubbi.Cards.dll
+C:\Users\rcaru\projects\Carubbi.Cards\Carubbi.SlotCard.UI\bin\Release\Carubbi.SlotCard.dll
+C:\Users\rcaru\projects\Carubbi.Cards\Carubbi.SlotCard.UI\bin\Release\Carubbi.Cards.pdb
+C:\Users\rcaru\projects\Carubbi.Cards\Carubbi.SlotCard.UI\bin\Release\Carubbi.SlotCard.pdb
+C:\Users\rcaru\projects\Carubbi.Cards\Carubbi.SlotCard.UI\obj\Release\Carubbi.SlotCard.UI.csprojResolveAssemblyReference.cache
+C:\Users\rcaru\projects\Carubbi.Cards\Carubbi.SlotCard.UI\obj\Release\Carubbi.SlotCard.UI.frmGame.resources
+C:\Users\rcaru\projects\Carubbi.Cards\Carubbi.SlotCard.UI\obj\Release\Carubbi.SlotCard.UI.Properties.Resources.resources
+C:\Users\rcaru\projects\Carubbi.Cards\Carubbi.SlotCard.UI\obj\Release\Carubbi.SlotCard.UI.csproj.GenerateResource.Cache
+C:\Users\rcaru\projects\Carubbi.Cards\Carubbi.SlotCard.UI\obj\Release\Carubbi.SlotCard.UI.csproj.CoreCompileInputs.cache
+C:\Users\rcaru\projects\Carubbi.Cards\Carubbi.SlotCard.UI\obj\Release\Carubbi.SlotCard.UI.exe
+C:\Users\rcaru\projects\Carubbi.Cards\Carubbi.SlotCard.UI\obj\Release\Carubbi.SlotCard.UI.pdb

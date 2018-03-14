@@ -12,3 +12,11 @@ D:\Projects\Carubbi.Cards\Carubbi.SlotCard\bin\Release\Carubbi.Cards.pdb
 D:\Projects\Carubbi.Cards\Carubbi.SlotCard\obj\Release\ResolveAssemblyReference.cache
 D:\Projects\Carubbi.Cards\Carubbi.SlotCard\obj\Release\Carubbi.SlotCard.dll
 D:\Projects\Carubbi.Cards\Carubbi.SlotCard\obj\Release\Carubbi.SlotCard.pdb
+C:\Users\rcaru\projects\Carubbi.Cards\Carubbi.SlotCard\bin\Release\Carubbi.SlotCard.dll
+C:\Users\rcaru\projects\Carubbi.Cards\Carubbi.SlotCard\bin\Release\Carubbi.SlotCard.pdb
+C:\Users\rcaru\projects\Carubbi.Cards\Carubbi.SlotCard\bin\Release\Carubbi.Cards.dll
+C:\Users\rcaru\projects\Carubbi.Cards\Carubbi.SlotCard\bin\Release\Carubbi.Cards.pdb
+C:\Users\rcaru\projects\Carubbi.Cards\Carubbi.SlotCard\obj\Release\Carubbi.SlotCard.csprojResolveAssemblyReference.cache
+C:\Users\rcaru\projects\Carubbi.Cards\Carubbi.SlotCard\obj\Release\Carubbi.SlotCard.csproj.CoreCompileInputs.cache
+C:\Users\rcaru\projects\Carubbi.Cards\Carubbi.SlotCard\obj\Release\Carubbi.SlotCard.dll
+C:\Users\rcaru\projects\Carubbi.Cards\Carubbi.SlotCard\obj\Release\Carubbi.SlotCard.pdb

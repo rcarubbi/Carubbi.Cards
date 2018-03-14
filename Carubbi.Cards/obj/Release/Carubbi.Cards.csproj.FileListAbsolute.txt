@@ -12,3 +12,11 @@ C:\Users\Carubbi\Source\Repos\Carubbi.Cards\Carubbi.Cards\obj\Release\Carubbi.Ca
 C:\Users\Carubbi\Source\Repos\Carubbi.Cards\Carubbi.Cards\obj\Release\Carubbi.Cards.csproj.GenerateResource.Cache
 C:\Users\Carubbi\Source\Repos\Carubbi.Cards\Carubbi.Cards\obj\Release\Carubbi.Cards.dll
 C:\Users\Carubbi\Source\Repos\Carubbi.Cards\Carubbi.Cards\obj\Release\Carubbi.Cards.pdb
+C:\Users\rcaru\projects\Carubbi.Cards\Carubbi.Cards\bin\Release\Carubbi.Cards.dll
+C:\Users\rcaru\projects\Carubbi.Cards\Carubbi.Cards\bin\Release\Carubbi.Cards.pdb
+C:\Users\rcaru\projects\Carubbi.Cards\Carubbi.Cards\obj\Release\Carubbi.Cards.csprojResolveAssemblyReference.cache
+C:\Users\rcaru\projects\Carubbi.Cards\Carubbi.Cards\obj\Release\Carubbi.Cards.Resources.resources
+C:\Users\rcaru\projects\Carubbi.Cards\Carubbi.Cards\obj\Release\Carubbi.Cards.csproj.GenerateResource.Cache
+C:\Users\rcaru\projects\Carubbi.Cards\Carubbi.Cards\obj\Release\Carubbi.Cards.csproj.CoreCompileInputs.cache
+C:\Users\rcaru\projects\Carubbi.Cards\Carubbi.Cards\obj\Release\Carubbi.Cards.dll
+C:\Users\rcaru\projects\Carubbi.Cards\Carubbi.Cards\obj\Release\Carubbi.Cards.pdb
