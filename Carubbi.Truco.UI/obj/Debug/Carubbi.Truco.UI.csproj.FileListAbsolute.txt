@@ -1,8 +1,0 @@
-C:\Users\rapbbii\Desktop\projetos\Carubbi.Cards\Carubbi.Truco.UI\bin\Debug\Carubbi.Truco.exe
-C:\Users\rapbbii\Desktop\projetos\Carubbi.Cards\Carubbi.Truco.UI\bin\Debug\Carubbi.Truco.pdb
-C:\Users\rapbbii\Desktop\projetos\Carubbi.Cards\Carubbi.Truco.UI\obj\Debug\ResolveAssemblyReference.cache
-C:\Users\rapbbii\Desktop\projetos\Carubbi.Cards\Carubbi.Truco.UI\obj\Debug\Carubbi.Truco.Form1.resources
-C:\Users\rapbbii\Desktop\projetos\Carubbi.Cards\Carubbi.Truco.UI\obj\Debug\Carubbi.Truco.Properties.Resources.resources
-C:\Users\rapbbii\Desktop\projetos\Carubbi.Cards\Carubbi.Truco.UI\obj\Debug\Carubbi.Truco.UI.csproj.GenerateResource.Cache
-C:\Users\rapbbii\Desktop\projetos\Carubbi.Cards\Carubbi.Truco.UI\obj\Debug\Carubbi.Truco.exe
-C:\Users\rapbbii\Desktop\projetos\Carubbi.Cards\Carubbi.Truco.UI\obj\Debug\Carubbi.Truco.pdb

@@ -1,8 +1,0 @@
-C:\Documents and Settings\Raphael\My Documents\Visual Studio 2008\Projects\Carubbi.Cards\Carubbi.PokerClient\bin\Debug\Carubbi.PokerClient.exe
-C:\Documents and Settings\Raphael\My Documents\Visual Studio 2008\Projects\Carubbi.Cards\Carubbi.PokerClient\bin\Debug\Carubbi.PokerClient.pdb
-C:\Documents and Settings\Raphael\My Documents\Visual Studio 2008\Projects\Carubbi.Cards\Carubbi.PokerClient\obj\Debug\ResolveAssemblyReference.cache
-C:\Documents and Settings\Raphael\My Documents\Visual Studio 2008\Projects\Carubbi.Cards\Carubbi.PokerClient\obj\Debug\Carubbi.PokerClient.frmLobby.resources
-C:\Documents and Settings\Raphael\My Documents\Visual Studio 2008\Projects\Carubbi.Cards\Carubbi.PokerClient\obj\Debug\Carubbi.PokerClient.Properties.Resources.resources
-C:\Documents and Settings\Raphael\My Documents\Visual Studio 2008\Projects\Carubbi.Cards\Carubbi.PokerClient\obj\Debug\Carubbi.PokerClient.csproj.GenerateResource.Cache
-C:\Documents and Settings\Raphael\My Documents\Visual Studio 2008\Projects\Carubbi.Cards\Carubbi.PokerClient\obj\Debug\Carubbi.PokerClient.exe
-C:\Documents and Settings\Raphael\My Documents\Visual Studio 2008\Projects\Carubbi.Cards\Carubbi.PokerClient\obj\Debug\Carubbi.PokerClient.pdb

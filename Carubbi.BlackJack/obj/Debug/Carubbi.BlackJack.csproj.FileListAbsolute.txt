@@ -1,7 +1,0 @@
-C:\Documents and Settings\Raphael\My Documents\Visual Studio 2008\Projects\Carubbi.Cards\Carubbi.BlackJack\bin\Debug\Carubbi.BlackJack.dll
-C:\Documents and Settings\Raphael\My Documents\Visual Studio 2008\Projects\Carubbi.Cards\Carubbi.BlackJack\bin\Debug\Carubbi.BlackJack.pdb
-C:\Documents and Settings\Raphael\My Documents\Visual Studio 2008\Projects\Carubbi.Cards\Carubbi.BlackJack\bin\Debug\Carubbi.Cards.dll
-C:\Documents and Settings\Raphael\My Documents\Visual Studio 2008\Projects\Carubbi.Cards\Carubbi.BlackJack\bin\Debug\Carubbi.Cards.pdb
-C:\Documents and Settings\Raphael\My Documents\Visual Studio 2008\Projects\Carubbi.Cards\Carubbi.BlackJack\obj\Debug\ResolveAssemblyReference.cache
-C:\Documents and Settings\Raphael\My Documents\Visual Studio 2008\Projects\Carubbi.Cards\Carubbi.BlackJack\obj\Debug\Carubbi.BlackJack.dll
-C:\Documents and Settings\Raphael\My Documents\Visual Studio 2008\Projects\Carubbi.Cards\Carubbi.BlackJack\obj\Debug\Carubbi.BlackJack.pdb

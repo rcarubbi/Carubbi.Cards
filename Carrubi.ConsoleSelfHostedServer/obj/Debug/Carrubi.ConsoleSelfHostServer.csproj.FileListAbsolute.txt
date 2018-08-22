@@ -1,7 +1,0 @@
-C:\Documents and Settings\Raphael\My Documents\Visual Studio 2008\Projects\Carubbi.Cards\Carrubi.ConsoleSelfHostedServer\bin\Debug\Carrubi.ConsoleSelfHostedServer.exe
-C:\Documents and Settings\Raphael\My Documents\Visual Studio 2008\Projects\Carubbi.Cards\Carrubi.ConsoleSelfHostedServer\bin\Debug\Carrubi.ConsoleSelfHostedServer.pdb
-C:\Documents and Settings\Raphael\My Documents\Visual Studio 2008\Projects\Carubbi.Cards\Carrubi.ConsoleSelfHostedServer\bin\Debug\Carubbi.PokerServices.dll
-C:\Documents and Settings\Raphael\My Documents\Visual Studio 2008\Projects\Carubbi.Cards\Carrubi.ConsoleSelfHostedServer\bin\Debug\Carubbi.PokerServices.pdb
-C:\Documents and Settings\Raphael\My Documents\Visual Studio 2008\Projects\Carubbi.Cards\Carrubi.ConsoleSelfHostedServer\obj\Debug\ResolveAssemblyReference.cache
-C:\Documents and Settings\Raphael\My Documents\Visual Studio 2008\Projects\Carubbi.Cards\Carrubi.ConsoleSelfHostedServer\obj\Debug\Carrubi.ConsoleSelfHostedServer.exe
-C:\Documents and Settings\Raphael\My Documents\Visual Studio 2008\Projects\Carubbi.Cards\Carrubi.ConsoleSelfHostedServer\obj\Debug\Carrubi.ConsoleSelfHostedServer.pdb
