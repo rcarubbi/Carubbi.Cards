@@ -1,16 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.Serialization;
 using System.ServiceModel;
-using System.Text;
 
 namespace Carubbi.PokerServices
 {
     [ServiceContract]
     public interface RoomManagerServiceContract
     {
-
         [OperationContract]
         [FaultContract(typeof(FaultException))]
         Server Connect(Player p);
@@ -29,9 +25,5 @@ namespace Carubbi.PokerServices
 
         [OperationContract]
         bool Join(Room room, Seat seat, Player player);
-
-
     }
-
- 
 }

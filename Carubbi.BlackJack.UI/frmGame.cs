@@ -1,72 +1,63 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
-using Carubbi.BlackJack;
-using Carubbi.Cards;
+
 namespace Carubbi.BlackJack.UI
 {
     public partial class frmGame : Form
     {
+        private Dealer _dealer;
+
         public frmGame()
         {
             InitializeComponent();
         }
-
-        private Dealer _dealer;
 
         private void btnNewGame_Click(object sender, EventArgs e)
         {
             btnNewGame.Enabled = false;
             EnableBetControls(true);
             _dealer = new Dealer();
-            _dealer.playerWins += new EventHandler(_dealer_playerWins);
-            _dealer.afterPlayerWins += new EventHandler(_dealer_afterPlayerWins);
-            _dealer.afterGameOver += new EventHandler(_dealer_afterGameOver);
-            _dealer.gameOver += new EventHandler(_dealer_gameOver);
-            _dealer.cardModified += new EventHandler(_dealer_cardModified);
+            _dealer.playerWins += _dealer_playerWins;
+            _dealer.afterPlayerWins += _dealer_afterPlayerWins;
+            _dealer.afterGameOver += _dealer_afterGameOver;
+            _dealer.gameOver += _dealer_gameOver;
+            _dealer.cardModified += _dealer_cardModified;
             lblCredits.Text = _dealer.CurrentGame.Player.Credits.ToString("c");
             ClearPanel(pnlDealerHand);
             ClearPanel(pnlPlayerHand);
         }
 
-        void _dealer_cardModified(object sender, EventArgs e)
+        private void _dealer_cardModified(object sender, EventArgs e)
         {
             RefreshScreen();
             Application.DoEvents();
         }
 
-        void _dealer_afterGameOver(object sender, EventArgs e)
+        private void _dealer_afterGameOver(object sender, EventArgs e)
         {
             ClearPanel(pnlPlayerHand);
             ClearPanel(pnlDealerHand);
             RefreshScreen();
         }
 
-        void _dealer_afterPlayerWins(object sender, EventArgs e)
+        private void _dealer_afterPlayerWins(object sender, EventArgs e)
         {
             ClearPanel(pnlPlayerHand);
             ClearPanel(pnlDealerHand);
             RefreshScreen();
         }
 
-        void _dealer_gameOver(object sender, EventArgs e)
+        private void _dealer_gameOver(object sender, EventArgs e)
         {
             RefreshScreen();
             MessageBox.Show("Game Over");
 
             EnableCardControls(false);
             EnableBetControls(true);
-
-
-
         }
 
-        void _dealer_playerWins(object sender, EventArgs e)
+        private void _dealer_playerWins(object sender, EventArgs e)
         {
             RefreshScreen();
             MessageBox.Show("Você venceu!!");
@@ -85,7 +76,7 @@ namespace Carubbi.BlackJack.UI
         private void EnableBetControls(bool enable)
         {
             btnBet.Enabled =
-              betValue.Enabled = enable;
+                betValue.Enabled = enable;
         }
 
         private void btnBet_Click(object sender, EventArgs e)
@@ -93,10 +84,10 @@ namespace Carubbi.BlackJack.UI
             try
             {
                 EnableBetControls(false);
-                
+
                 _dealer.StartGame(betValue.Value);
-                this.Text = string.Format("Carubbi's Blackjack - Game Number #{0}", _dealer.Deck.GameNumber);
-      
+                Text = string.Format("Carubbi's Blackjack - Game Number #{0}", _dealer.Deck.GameNumber);
+
                 EnableCardControls(true);
                 RefreshScreen();
             }
@@ -143,18 +134,18 @@ namespace Carubbi.BlackJack.UI
         {
             foreach (Control c in pnlHand.Controls)
             {
-                ((PictureBox)c).BackColor = Color.Transparent;
-                ((PictureBox)c).Image = null;
-                ((PictureBox)c).Refresh();
+                ((PictureBox) c).BackColor = Color.Transparent;
+                ((PictureBox) c).Image = null;
+                ((PictureBox) c).Refresh();
             }
         }
 
         private void RefreshPanel(Panel pnlHand, Player p)
         {
-            int indexCard = 1;
-            foreach (Card c in p.Hand)
+            var indexCard = 1;
+            foreach (var c in p.Hand)
             {
-                PictureBox pic = (PictureBox)pnlHand.Controls.Find(String.Concat(GetBaseName(pnlHand), indexCard), false)[0];
+                var pic = (PictureBox) pnlHand.Controls.Find(string.Concat(GetBaseName(pnlHand), indexCard), false)[0];
                 pic.Width = c.Image.Width;
                 pic.Height = c.Image.Height;
                 pic.Image = c.Image;
@@ -163,20 +154,15 @@ namespace Carubbi.BlackJack.UI
 
                 indexCard++;
             }
-
         }
 
         private string GetBaseName(Panel pnlHand)
         {
-            string pictureBaseName = string.Empty;
+            var pictureBaseName = string.Empty;
             if (pnlHand.Name.ToLower().Contains("dealer"))
-            {
                 pictureBaseName = "dealerCard";
-            }
             else
-            {
                 pictureBaseName = "playerCard";
-            }
 
             return pictureBaseName;
         }
@@ -194,16 +180,12 @@ namespace Carubbi.BlackJack.UI
 
         private void frmGame_Load(object sender, EventArgs e)
         {
-
         }
 
         private void betValue_ValueChanged(object sender, EventArgs e)
         {
             if (betValue.Value > _dealer.CurrentGame.Player.Credits)
-            {
                 betValue.Value = _dealer.CurrentGame.Player.Credits;
-            }
         }
-
     }
 }

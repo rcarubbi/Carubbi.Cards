@@ -1,46 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace Carubbi.Truco
+﻿namespace Carubbi.Truco
 {
     public class Game
     {
-
-
-        public TrucoDeck Deck
-        {
-            get;
-            private set;
-        }
-
-        public Player P1
-        {
-            get;
-            private set;
-        }
-        
-        public Player P2
-        {
-            get;
-            private set;
-        }
-        
-        public Player P3
-        {
-            get;
-            private set;
-
-        }
-        
-        public Player P4
-        {
-            get;
-            private set;
-        }
-
-
         public Game(Player p1, Player p2, TrucoDeckType gameType)
         {
             P1 = p1;
@@ -55,11 +16,22 @@ namespace Carubbi.Truco
             P4 = p4;
         }
 
+
+        public TrucoDeck Deck { get; }
+
+        public Player P1 { get; }
+
+        public Player P2 { get; }
+
+        public Player P3 { get; }
+
+        public Player P4 { get; }
+
         public void StartHand()
         {
             Deck.Fill(true);
             Deck.Shuffle(true);
-            for (int i = 1; i <= 3; i++)
+            for (var i = 1; i <= 3; i++)
             {
                 GiveCard(P1, i);
                 GiveCard(P2, i);
@@ -75,7 +47,7 @@ namespace Carubbi.Truco
         private void GiveCard(Player p, int cardNumber)
         {
             switch (cardNumber)
-            { 
+            {
                 case 1:
                     p.Hand.Card1 = Deck.GetTop();
                     break;
@@ -87,9 +59,5 @@ namespace Carubbi.Truco
                     break;
             }
         }
-
-       
-
-
     }
 }

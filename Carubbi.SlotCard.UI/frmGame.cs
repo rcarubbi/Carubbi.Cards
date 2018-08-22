@@ -1,27 +1,27 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Windows.Forms;
-using Carubbi.SlotCard;
-using Carubbi.Cards;
-using System.Threading;
 using System.IO;
+using System.Windows.Forms;
+using Carubbi.Cards;
+
 namespace Carubbi.SlotCard.UI
 {
     public partial class frmGame : Form
     {
+        private readonly Machine _machine;
 
-        private Machine _machine;
+        public frmGame()
+        {
+            InitializeComponent();
+            _machine = new Machine();
+            ConfigureMachine();
+        }
 
         public int LinesEnableds
         {
             get
             {
-                int qtLinesEnableds = 0;
+                var qtLinesEnableds = 0;
                 if (pnlLine1.Enabled)
                     qtLinesEnableds++;
                 if (pnlLine2.Enabled)
@@ -33,25 +33,18 @@ namespace Carubbi.SlotCard.UI
             }
         }
 
-        public frmGame()
-        {
-            InitializeComponent();
-            _machine = new Machine();
-            ConfigureMachine();
-        }
-
         private void ConfigureMachine()
         {
-            _machine.OnCreditsAltered += new EventHandler(_machine_CreditsAltered);
-            _machine.OnSpin += new EventHandler(_machine_OnSpin);
-            _machine.OnPlay += new EventHandler(_machine_OnPlay);
-            _machine.OnPayPrice += new PriceHandler(_machine_OnPayPrice);
+            _machine.OnCreditsAltered += _machine_CreditsAltered;
+            _machine.OnSpin += _machine_OnSpin;
+            _machine.OnPlay += _machine_OnPlay;
+            _machine.OnPayPrice += _machine_OnPayPrice;
         }
 
-        void _machine_OnPayPrice(object sender, PriceEventArgs e)
+        private void _machine_OnPayPrice(object sender, PriceEventArgs e)
         {
             switch (e.LineNumber)
-            { 
+            {
                 case 1:
                     lblGainLine2.Text = e.PriceValue.ToString();
                     lblPriceName2.Text = e.PriceName;
@@ -64,29 +57,24 @@ namespace Carubbi.SlotCard.UI
                     lblGainLine3.Text = e.PriceValue.ToString();
                     lblPriceName3.Text = e.PriceName;
                     break;
-
             }
-                
         }
 
-        void _machine_OnPlay(object sender, EventArgs e)
+        private void _machine_OnPlay(object sender, EventArgs e)
         {
             lblTotalGamesValue.Text = _machine.TotalGamesPlayeds.ToString();
             lblCoinsCollectedValue.Text = _machine.TotalCoinsReceived.ToString();
             lblCoinsReturnValue.Text = _machine.TotalCoinsReturneds.ToString();
-            lblPercentReturnValue.Text = ((Convert.ToDecimal(_machine.TotalCoinsReturneds) / Convert.ToDecimal(_machine.TotalCoinsReceived)) * 100).ToString();
+            lblPercentReturnValue.Text =
+                (Convert.ToDecimal(_machine.TotalCoinsReturneds) / Convert.ToDecimal(_machine.TotalCoinsReceived) * 100)
+                .ToString();
             lblMode.Text = _machine.Mode;
-            
         }
 
-        void _machine_OnSpin(object sender, EventArgs e)
+        private void _machine_OnSpin(object sender, EventArgs e)
         {
-            int roulleteNumber = 1;
-            foreach (Roullete r in _machine.Roulletes)
-            {
-                RefreshRoullete(r, roulleteNumber++);
-              
-            }
+            var roulleteNumber = 1;
+            foreach (var r in _machine.Roulletes) RefreshRoullete(r, roulleteNumber++);
             Application.DoEvents();
         }
 
@@ -132,7 +120,7 @@ namespace Carubbi.SlotCard.UI
             pic.Refresh();
         }
 
-        void _machine_CreditsAltered(object sender, EventArgs e)
+        private void _machine_CreditsAltered(object sender, EventArgs e)
         {
             lblCredits.Text = _machine.Credits.ToString();
         }
@@ -151,13 +139,13 @@ namespace Carubbi.SlotCard.UI
 
         private void btn1Line_Click(object sender, EventArgs e)
         {
-            int maxPossible = _machine.CheckCreditsToPlayLines(1);
+            var maxPossible = _machine.CheckCreditsToPlayLines(1);
             EnableLine(pnlLine2);
             DisableLine(pnlLine1);
             DisableLine(pnlLine3);
             btn1Line.Enabled = false;
             btn2Lines.Enabled =
-            btn3Lines.Enabled = true;
+                btn3Lines.Enabled = true;
 
             if (maxPossible <= 0)
                 GameOver();
@@ -165,14 +153,14 @@ namespace Carubbi.SlotCard.UI
 
         private void btn2Lines_Click(object sender, EventArgs e)
         {
-            int maxPossible = _machine.CheckCreditsToPlayLines(2);
+            var maxPossible = _machine.CheckCreditsToPlayLines(2);
 
             EnableLine(pnlLine1);
             EnableLine(pnlLine2);
             DisableLine(pnlLine3);
             btn2Lines.Enabled = false;
             btn1Line.Enabled =
-            btn3Lines.Enabled = true;
+                btn3Lines.Enabled = true;
 
             if (maxPossible <= 0)
                 btn1Line_Click(this, EventArgs.Empty);
@@ -180,14 +168,14 @@ namespace Carubbi.SlotCard.UI
 
         private void btn3Lines_Click(object sender, EventArgs e)
         {
-            int maxPossible = _machine.CheckCreditsToPlayLines(3);
+            var maxPossible = _machine.CheckCreditsToPlayLines(3);
 
             EnableLine(pnlLine1);
             EnableLine(pnlLine2);
             EnableLine(pnlLine3);
             btn3Lines.Enabled = false;
             btn1Line.Enabled =
-            btn2Lines.Enabled = true;
+                btn2Lines.Enabled = true;
 
             if (maxPossible <= 0)
                 btn2Lines_Click(this, EventArgs.Empty);
@@ -201,15 +189,11 @@ namespace Carubbi.SlotCard.UI
 
         private void PrepareNewGame()
         {
-           
             _machine.Credits = 1000;
             btn1Line_Click(this, EventArgs.Empty);
             EnableBetButtons(true);
             btnNewGame.Enabled = false;
-           
-
         }
-
 
 
         private void GameOver()
@@ -229,30 +213,30 @@ namespace Carubbi.SlotCard.UI
         private void EnableBetButtons(bool p)
         {
             btnBet1.Enabled =
-            btnBet3.Enabled =
-            btnBetMax.Enabled = p;
+                btnBet3.Enabled =
+                    btnBetMax.Enabled = p;
         }
 
         private void DisableAllLineButtons()
         {
             btn1Line.Enabled =
-            btn2Lines.Enabled =
-            btn3Lines.Enabled = false;
+                btn2Lines.Enabled =
+                    btn3Lines.Enabled = false;
         }
 
         private void RefreshBetPanels(int value)
         {
             lblGainLine1.Text =
-            lblGainLine2.Text =
-            lblGainLine3.Text =
-            lblPriceName1.Text =
-            lblPriceName2.Text =
-            lblPriceName3.Text = string.Empty;
+                lblGainLine2.Text =
+                    lblGainLine3.Text =
+                        lblPriceName1.Text =
+                            lblPriceName2.Text =
+                                lblPriceName3.Text = string.Empty;
 
 
             lblBetLine1.Text =
-            lblBetLine2.Text =
-            lblBetLine3.Text = string.Empty;
+                lblBetLine2.Text =
+                    lblBetLine3.Text = string.Empty;
             if (value > 0)
             {
                 if (pnlLine1.Enabled)
@@ -266,38 +250,44 @@ namespace Carubbi.SlotCard.UI
 
         private void btnBet1_Click(object sender, EventArgs e)
         {
-            int creditsRemain = _machine.CheckCreditsToPlayLines(LinesEnableds);
+            var creditsRemain = _machine.CheckCreditsToPlayLines(LinesEnableds);
             if (creditsRemain >= 1)
             {
                 RefreshBetPanels(1);
                 _machine.Play(1, LinesEnableds);
             }
             else
+            {
                 GameOver();
+            }
         }
 
         private void btnBet3_Click(object sender, EventArgs e)
         {
-            int creditsRemain = _machine.CheckCreditsToPlayLines(LinesEnableds);
+            var creditsRemain = _machine.CheckCreditsToPlayLines(LinesEnableds);
             if (creditsRemain >= 3)
             {
                 RefreshBetPanels(3);
                 _machine.Play(3, LinesEnableds);
             }
             else
+            {
                 btnBet1_Click(this, EventArgs.Empty);
+            }
         }
 
         private void btnBetMax_Click(object sender, EventArgs e)
         {
-             int creditsRemain = _machine.CheckCreditsToPlayLines(LinesEnableds);
-             if (creditsRemain >= 5)
-             {
-                 RefreshBetPanels(5);
-                 _machine.Play(5, LinesEnableds);
-             }
-             else
-                 btnBet3_Click(this, EventArgs.Empty);
+            var creditsRemain = _machine.CheckCreditsToPlayLines(LinesEnableds);
+            if (creditsRemain >= 5)
+            {
+                RefreshBetPanels(5);
+                _machine.Play(5, LinesEnableds);
+            }
+            else
+            {
+                btnBet3_Click(this, EventArgs.Empty);
+            }
         }
 
         private void btnCalibrate_Click(object sender, EventArgs e)
@@ -315,27 +305,21 @@ namespace Carubbi.SlotCard.UI
 
         private void BeginPlay()
         {
-            StreamWriter sw = new StreamWriter(@"C:\Documents and Settings\Raphael\My Documents\Testes\result.txt", true);
+            var sw = new StreamWriter(@"C:\Documents and Settings\Raphael\My Documents\Testes\result.txt", true);
             btnNewGame_Click(this, EventArgs.Empty);
             btn3Lines_Click(this, EventArgs.Empty);
-            int countGames = 0;
-            int record = 0;
-            while (_machine.Credits >0)
+            var countGames = 0;
+            var record = 0;
+            while (_machine.Credits > 0)
             {
                 btnBetMax_Click(this, EventArgs.Empty);
-                if (_machine.Credits > record)
-                {
-                    record = _machine.Credits;
-                }
+                if (_machine.Credits > record) record = _machine.Credits;
                 countGames++;
             }
 
-            sw.WriteLine(string.Format("{0} - Jogos {1}, Maximo obtido {2}", DateTime.Now, countGames, record));
+            sw.WriteLine("{0} - Jogos {1}, Maximo obtido {2}", DateTime.Now, countGames, record);
             sw.Close();
             sw.Dispose();
-        
         }
-
-
     }
 }

@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace Carubbi.BlackJack
 {
@@ -9,17 +6,9 @@ namespace Carubbi.BlackJack
     {
         public RuleInfringedException(string message)
         {
-             _message = message;
+            Message = message;
         }
 
-        private string _message;
-        public override string Message
-        {
-            get
-            {
-                return _message;
-            }
-
-        }
+        public override string Message { get; }
     }
 }

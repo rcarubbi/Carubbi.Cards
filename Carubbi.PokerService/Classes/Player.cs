@@ -1,20 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Collections.Generic;
 using System.Runtime.Serialization;
 
 namespace Carubbi.PokerServices
 {
     public class PlayerNameEqualityComparer : IEqualityComparer<Player>
     {
-
-
         #region IEqualityComparer<Player> Members
 
         public bool Equals(Player x, Player y)
         {
-            return (x.Name.ToLower().Trim() == y.Name.ToLower().Trim());
+            return x.Name.ToLower().Trim() == y.Name.ToLower().Trim();
         }
 
         public int GetHashCode(Player obj)
@@ -28,13 +23,7 @@ namespace Carubbi.PokerServices
     [DataContract]
     public class Player
     {
-
         public static PlayerNameEqualityComparer PesquisarPorNome = new PlayerNameEqualityComparer();
-        [DataMember]
-        public String Name { get; set; }
-
-        [DataMember]
-        public Int32 Credits { get; set; }
 
         public Player(string name)
         {
@@ -42,6 +31,8 @@ namespace Carubbi.PokerServices
             Credits = 1000;
         }
 
+        [DataMember] public string Name { get; set; }
 
+        [DataMember] public int Credits { get; set; }
     }
 }

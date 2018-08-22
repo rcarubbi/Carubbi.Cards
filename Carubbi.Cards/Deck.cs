@@ -1,27 +1,28 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading;
 
 namespace Carubbi.Cards
 {
     public class Deck : CardSet
     {
+        private Random _getterShuffler;
+        private readonly int _numberOfDecks;
+
+        private readonly Random _seeder;
+        private Random _shuffler;
+
+        private readonly bool _startClosed;
+
         public Deck()
             : this(1)
         {
-
         }
 
         public Deck(int numberOfDecks)
             : this(numberOfDecks, true)
         {
-
         }
-
-        private bool _startClosed;
-        private int _numberOfDecks;
 
         public Deck(int numberOfDecks, bool startClosed)
         {
@@ -29,35 +30,21 @@ namespace Carubbi.Cards
             _startClosed = startClosed;
             _numberOfDecks = numberOfDecks;
 
-            for (int i = 0; i < _numberOfDecks; i++)
+            for (var i = 0; i < _numberOfDecks; i++)
                 Fill(false);
         }
 
-        private Random _seeder;
-        private Random _shuffler;
-        private Random _getterShuffler; 
-
-        private int _gameNumber;
-        public int GameNumber
-        {
-            get
-            {
-                return _gameNumber;
-            }
-        }
+        public int GameNumber { get; private set; }
 
         public void Shuffle()
         {
-            this.Shuffle(true);
+            Shuffle(true);
         }
 
         public void Shuffle(bool reseed)
         {
             PrepareShuffler(reseed);
-            for (int i = 0; i < this.Count*100; i++)
-            {
-                PutMiddle(GetRamdom());
-            }
+            for (var i = 0; i < Count * 100; i++) PutMiddle(GetRamdom());
         }
 
         public void Fill()
@@ -68,20 +55,17 @@ namespace Carubbi.Cards
         public void Fill(bool clearBefore)
         {
             if (clearBefore)
-                this.Clear();
+                Clear();
 
-            List<Suit> suits = new List<Suit>();
+            var suits = new List<Suit>();
             suits.Add(Suit.Copas);
             suits.Add(Suit.Espadas);
             suits.Add(Suit.Ouros);
             suits.Add(Suit.Paus);
 
-            foreach (Suit suit in suits)
-            {
-                for (int i = 1; i <= 13; i++)
-                    this.Add(new Card(suit, i, _startClosed));
-            }
-
+            foreach (var suit in suits)
+                for (var i = 1; i <= 13; i++)
+                    Add(new Card(suit, i, _startClosed));
         }
 
         private void PrepareShuffler(bool reseed)
@@ -89,8 +73,8 @@ namespace Carubbi.Cards
             if (_shuffler == null || reseed)
             {
                 _shuffler = null;
-                _gameNumber = _seeder.Next();
-                _shuffler = new Random(_gameNumber);
+                GameNumber = _seeder.Next();
+                _shuffler = new Random(GameNumber);
                 Thread.Sleep(10);
                 _getterShuffler = new Random();
             }
@@ -101,8 +85,8 @@ namespace Carubbi.Cards
             if (card != null)
             {
                 PrepareShuffler(false);
-                int ramdomIndex = _shuffler.Next(0, this.Count + 1);
-                this.Insert(ramdomIndex, card);
+                var ramdomIndex = _shuffler.Next(0, Count + 1);
+                Insert(ramdomIndex, card);
             }
         }
 
@@ -111,14 +95,13 @@ namespace Carubbi.Cards
             if (!IsEmpty)
             {
                 PrepareShuffler(false);
-                int ramdomIndex = _getterShuffler.Next(0, this.Count);
-                Card card = this[ramdomIndex];
-                this.RemoveAt(ramdomIndex);
+                var ramdomIndex = _getterShuffler.Next(0, Count);
+                var card = this[ramdomIndex];
+                RemoveAt(ramdomIndex);
                 return card;
             }
-            else
-                return null;
-        }
 
+            return null;
+        }
     }
 }

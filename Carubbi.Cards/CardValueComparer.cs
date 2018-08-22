@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Collections.Generic;
 
 namespace Carubbi.Cards
 {
@@ -13,10 +10,9 @@ namespace Carubbi.Cards
         {
             if (x.Value > y.Value)
                 return 1;
-            else if (y.Value > x.Value)
+            if (y.Value > x.Value)
                 return -1;
-            else
-                return 0;
+            return 0;
         }
 
         #endregion

@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace Carubbi.Cards
+﻿namespace Carubbi.Cards
 {
-    public enum Suit : int
+    public enum Suit
     {
         Espadas,
         Copas,

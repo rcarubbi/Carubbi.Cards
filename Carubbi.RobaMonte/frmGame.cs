@@ -1,10 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 using Carubbi.Cards;
 
@@ -12,15 +6,16 @@ namespace Carubbi.RobaMonte
 {
     public partial class frmGame : Form
     {
+        private Deck _deck;
+        private CardSet _player1;
+        private CardSet _player2;
+
+        private bool turn;
+
         public frmGame()
         {
             InitializeComponent();
         }
-
-
-        private Deck _deck;
-        private CardSet _player1;
-        private CardSet _player2;
 
         private void frmGame_Load(object sender, EventArgs e)
         {
@@ -30,25 +25,21 @@ namespace Carubbi.RobaMonte
             Start();
         }
 
-        private bool turn = false;
-
         private void btnDesce_Click(object sender, EventArgs e)
         {
-
             if (!_deck.IsEmpty)
             {
                 if (turn)
                 {
                     Play(picPlayer1, _player1, lblPlacarP1);
                     CheckSteal(_player1, _player2, picPlayer1, lblPlacarP1, picPlayer2, lblPlacarP2);
-                    
                 }
                 else
                 {
                     Play(picPlayer2, _player2, lblPlacarP2);
                     CheckSteal(_player2, _player1, picPlayer2, lblPlacarP2, picPlayer1, lblPlacarP1);
-                  
                 }
+
                 turn = !turn;
             }
             else
@@ -80,14 +71,14 @@ namespace Carubbi.RobaMonte
                 picture.Image = player[0].Image;
                 picture.Refresh();
             }
-          
+
             placar.Text = player.Count.ToString();
         }
 
-        private void CheckSteal(CardSet stealer, CardSet stealed, PictureBox pictureStealer, Label placarStealer, PictureBox pictureStealed, Label placarStealed)
+        private void CheckSteal(CardSet stealer, CardSet stealed, PictureBox pictureStealer, Label placarStealer,
+            PictureBox pictureStealed, Label placarStealed)
         {
             if (stealer.Count > 0 && stealed.Count > 0)
-            {
                 if (stealer[0].Value == stealed[0].Value)
                 {
                     MessageBox.Show(string.Format("Robou {0} cartas!!!", stealed.Count));
@@ -98,7 +89,6 @@ namespace Carubbi.RobaMonte
                     Refresh(pictureStealer, stealer, placarStealer);
                     Refresh(pictureStealed, stealed, placarStealed);
                 }
-            }
         }
 
         private void Play(PictureBox picture, CardSet player, Label placar)
@@ -120,10 +110,6 @@ namespace Carubbi.RobaMonte
         {
             _deck.Fill();
             _deck.Shuffle();
-         
         }
-
-
-
     }
 }

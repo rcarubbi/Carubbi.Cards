@@ -1,25 +1,22 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Runtime.Serialization;
 using System.ServiceModel;
-using System.Text;
-using System.ServiceModel.Dispatcher;
 
 namespace Carubbi.PokerServices
 {
     // NOTE: If you change the class name "Service1" here, you must also update the reference to "Service1" in App.config.
     public class RoomManagerServiceImplementation : RoomManagerServiceContract
     {
-        Server _server = null;
-
-        public event EventHandler PlayerConnect;
-        public event EventHandler PlayerJoinRoom;
+        private readonly Server _server;
 
         public RoomManagerServiceImplementation()
         {
             _server = Server.GetInstance();
         }
+
+        public event EventHandler PlayerConnect;
+        public event EventHandler PlayerJoinRoom;
 
 
         #region RoomManagerServiceContract Members
@@ -31,13 +28,9 @@ namespace Carubbi.PokerServices
                 _server.PlayersConnected.Add(p);
                 return _server;
             }
-            else
-            {
-                FaultException ex = new FaultException("Já existe um usuário conectado com este login");
-                throw ex;
-            }
 
-            
+            var ex = new FaultException("Já existe um usuário conectado com este login");
+            throw ex;
         }
 
         public Room CreateRoom(Server server, string roomName, Player owner)
@@ -82,6 +75,5 @@ namespace Carubbi.PokerServices
         }
 
         #endregion
-
     }
 }

@@ -11,16 +11,25 @@ namespace Carubbi.SlotCard
     }
 
     public delegate void PriceHandler(object sender, PriceEventArgs e);
+
     public class Payer
     {
+        private decimal _variantPercent;
+
         public Payer()
         {
-            _gamesInCollectMode = SwapModeCountDown();
+            GamesInCollectMode = SwapModeCountDown();
         }
+
+        public int GamesInCollectMode { get; private set; }
+
+        public int GamesInDeliverMode { get; private set; }
+
+        public bool IsInDeliverMode { get; private set; }
 
         private int SwapModeCountDown()
         {
-            Random random = new Random();
+            var random = new Random();
             return random.Next(1, 20);
         }
 
@@ -28,17 +37,24 @@ namespace Carubbi.SlotCard
 
         internal int Pay(List<Line> lines, int coins, bool raiseEvents)
         {
-            int coinsToPay = 0;
-            int lineCount = 1;
-            foreach (Line l in lines)
+            var coinsToPay = 0;
+            var lineCount = 1;
+            foreach (var l in lines)
             {
-                int resultPrice = l.Result();
+                var resultPrice = l.Result();
                 coinsToPay += resultPrice * coins;
                 if (resultPrice > 0 && raiseEvents && OnPayPrice != null)
-                    OnPayPrice(this, new PriceEventArgs() { LineNumber = lineCount, PriceName = l.PriceName, PriceValue = resultPrice * coins });
+                    OnPayPrice(this,
+                        new PriceEventArgs
+                        {
+                            LineNumber = lineCount,
+                            PriceName = l.PriceName,
+                            PriceValue = resultPrice * coins
+                        });
 
                 lineCount++;
             }
+
             return coinsToPay;
         }
 
@@ -47,127 +63,87 @@ namespace Carubbi.SlotCard
             return Pay(lines, coins, true);
         }
 
-        private int _gamesInCollectMode;
-        
-        private int _gamesInDeliverMode;
-        
-        private bool _isInDeliverMode = false;
-
-        public int GamesInCollectMode
-        {
-            get { return _gamesInCollectMode; }
-        }
-
-        public int GamesInDeliverMode
-        {
-            get { return _gamesInDeliverMode; }
-        }
-
-        public bool IsInDeliverMode
-        {
-            get
-            {
-                return _isInDeliverMode;
-            }
-        }
-        private decimal _variantPercent;
-
-        internal bool ValidPay(List<Line> lines, int coins, int totalCoinsReceived, int totalCoinsReturneds, decimal percentGain)
+        internal bool ValidPay(List<Line> lines, int coins, int totalCoinsReceived, int totalCoinsReturneds,
+            decimal percentGain)
         {
             if (_variantPercent == 0)
                 GeneratePercentGain(percentGain);
 
             bool validPay;
 
-            int coinsToPay = Pay(lines, coins, false);
+            var coinsToPay = Pay(lines, coins, false);
 
             if (coinsToPay > 0)
             {
-                decimal percentToGain = Convert.ToDecimal(totalCoinsReturneds + coinsToPay) * 100 / Convert.ToDecimal(totalCoinsReceived);
+                var percentToGain = Convert.ToDecimal(totalCoinsReturneds + coinsToPay) * 100 /
+                                    Convert.ToDecimal(totalCoinsReceived);
                 validPay = _variantPercent >= percentToGain;
             }
             else
             {
-                if (!_isInDeliverMode)
-                    _gamesInCollectMode--;
+                if (!IsInDeliverMode)
+                    GamesInCollectMode--;
                 validPay = true;
             }
 
             if (validPay && coinsToPay > 0)
             {
-                if (!_isInDeliverMode)
-                {
+                if (!IsInDeliverMode)
                     return SwitchToDeliveryMode(percentGain);
-                }
-                else
-                {
-                    return SwitchToCollectMode(percentGain);
-                }
+                return SwitchToCollectMode(percentGain);
             }
-            else if (coinsToPay == 0)
+
+            if (coinsToPay == 0)
             {
-                if (!_isInDeliverMode)
-                {
+                if (!IsInDeliverMode)
                     SwitchToDeliveryMode(percentGain);
-                }
                 else
-                {
                     SwitchToCollectMode(percentGain);
-                }
                 return true;
             }
+
+            if (!IsInDeliverMode)
+                SwitchToDeliveryMode(percentGain);
             else
-            {
-                if (!_isInDeliverMode)
-                {
-                    SwitchToDeliveryMode(percentGain);
-                }
-                else
-                {
-                    SwitchToCollectMode(percentGain);
-                }
-                return false;
-            }
+                SwitchToCollectMode(percentGain);
+            return false;
         }
 
         private void GeneratePercentGain(decimal percentGain)
         {
-            Random rnd = new Random();
-            int maxPercentGain = Convert.ToInt32(Math.Floor(percentGain));
-            int minPercentGain = maxPercentGain - 20;
+            var rnd = new Random();
+            var maxPercentGain = Convert.ToInt32(Math.Floor(percentGain));
+            var minPercentGain = maxPercentGain - 20;
             _variantPercent = rnd.Next(minPercentGain > 0 ? minPercentGain : 0, maxPercentGain);
         }
 
 
         private bool SwitchToDeliveryMode(decimal percentGain)
         {
-            if (_gamesInCollectMode == 0)
+            if (GamesInCollectMode == 0)
             {
-                _gamesInDeliverMode = SwapModeCountDown();
+                GamesInDeliverMode = SwapModeCountDown();
                 GeneratePercentGain(percentGain);
-                _isInDeliverMode = true;
+                IsInDeliverMode = true;
                 return true;
             }
-            else
-            {
-                return false;
-            }
+
+            return false;
         }
 
 
         private bool SwitchToCollectMode(decimal percentGain)
         {
-            _gamesInDeliverMode--;
-            if (_gamesInDeliverMode == 0)
+            GamesInDeliverMode--;
+            if (GamesInDeliverMode == 0)
             {
-                _gamesInCollectMode = SwapModeCountDown();
+                GamesInCollectMode = SwapModeCountDown();
                 GeneratePercentGain(percentGain);
-                _isInDeliverMode = false;
+                IsInDeliverMode = false;
                 return false;
             }
-            else
-                return true;
+
+            return true;
         }
     }
-
 }

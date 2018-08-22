@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace Carubbi.Truco
+﻿namespace Carubbi.Truco
 {
-    public enum TrucoDeckType : int
+    public enum TrucoDeckType
     {
         Short,
         Long

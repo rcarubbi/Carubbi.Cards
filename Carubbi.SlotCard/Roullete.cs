@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using Carubbi.Cards;
+﻿using Carubbi.Cards;
+
 namespace Carubbi.SlotCard
 {
     public class Roullete
@@ -17,6 +14,5 @@ namespace Carubbi.SlotCard
             Slot2 = deckToSpin2.GetTop();
             Slot3 = deckToSpin3.GetTop();
         }
-    
     }
 }

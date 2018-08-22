@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Collections.Generic;
 
 namespace Carubbi.Cards
 {
@@ -11,12 +8,11 @@ namespace Carubbi.Cards
 
         public int Compare(Card x, Card y)
         {
-            if ((int)x.Naipe > (int)y.Naipe)
+            if ((int) x.Naipe > (int) y.Naipe)
                 return 1;
-            else if ((int)y.Naipe > (int)x.Naipe)
+            if ((int) y.Naipe > (int) x.Naipe)
                 return -1;
-            else
-                return 0;
+            return 0;
         }
 
         #endregion

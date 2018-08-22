@@ -1,80 +1,28 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Drawing;
 
 namespace Carubbi.Cards
 {
     public class Card
     {
-
-        public Card(Suit naipe, int value, bool startClosed)
-        {
-            _naipe = naipe;
-            _value = value;
-            _isClosed = startClosed;
-
-        }
-
-        public event EventHandler opened;
-        public event EventHandler closed;
-
-
-        public void Turn()
-        {
-            if (_isClosed)
-                Open();
-            else
-                Close();
-        }
-
-        private Suit _naipe;
-        public Suit Naipe
-        {
-            get
-            {
-                return _naipe;
-            }
-
-        }
-
-        private int _value;
-        public int Value
-        {
-            get
-            {
-                return _value;
-            }
-
-        }
-
-        private bool _isClosed;
-        public bool IsClosed
-        {
-            get
-            {
-                return _isClosed;
-            }
-        }
-
-
-        public void Open()
-        {
-            _isClosed = false;
-            if (opened != null)
-                opened(this, new EventArgs());
-        }
-
-        public void Close()
-        {
-            _isClosed = true;
-            if (closed != null)
-                closed(this, new EventArgs());
-        }
+        private Bitmap _image;
 
 
         private string _name;
+
+        public Card(Suit naipe, int value, bool startClosed)
+        {
+            Naipe = naipe;
+            Value = value;
+            IsClosed = startClosed;
+        }
+
+        public Suit Naipe { get; }
+
+        public int Value { get; }
+
+        public bool IsClosed { get; private set; }
+
         public string Name
         {
             get
@@ -83,39 +31,52 @@ namespace Carubbi.Cards
                     _name = CheckName();
                 return _name;
             }
-
         }
 
-        private Bitmap _image;
         public Bitmap Image
         {
             get
             {
-
-                if (_isClosed)
-                {
+                if (IsClosed)
                     _image = Resources.Back;
-                }
                 else
-                {
                     _image = CheckImage();
-                }
                 return _image;
             }
-
         }
 
-        public string CompleteName
+        public string CompleteName => string.Format("{0} de {1}", Name, Naipe);
+
+        public event EventHandler opened;
+        public event EventHandler closed;
+
+
+        public void Turn()
         {
-            get
-            {
-                return string.Format("{0} de {1}", Name, Naipe);
-            }
+            if (IsClosed)
+                Open();
+            else
+                Close();
+        }
+
+
+        public void Open()
+        {
+            IsClosed = false;
+            if (opened != null)
+                opened(this, new EventArgs());
+        }
+
+        public void Close()
+        {
+            IsClosed = true;
+            if (closed != null)
+                closed(this, new EventArgs());
         }
 
         private string CheckName()
         {
-            string name = string.Empty;
+            var name = string.Empty;
             switch (Value)
             {
                 case 1:
@@ -160,7 +121,6 @@ namespace Carubbi.Cards
             }
 
             return name;
-
         }
 
         private Bitmap CheckImage()
@@ -299,6 +259,5 @@ namespace Carubbi.Cards
                     return null;
             }
         }
-
     }
 }

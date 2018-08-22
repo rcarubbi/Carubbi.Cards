@@ -1,20 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace Carubbi.SlotCard
+﻿namespace Carubbi.SlotCard
 {
-   public class PayTable 
+    public class PayTable
     {
-        public static Int32 Pair = 2;
-        public static Int32 TwoPairs = 5;
-        public static Int32 ThreeOfAKind = 10;
-        public static Int32 Straight = 25;
-        public static Int32 Flush = 50;
-        public static Int32 Fullen = 100;
-        public static Int32 FourOfAKind = 300;
-        public static Int32 StraightFlush = 10000;
-        
+        public static int Pair = 2;
+        public static int TwoPairs = 5;
+        public static int ThreeOfAKind = 10;
+        public static int Straight = 25;
+        public static int Flush = 50;
+        public static int Fullen = 100;
+        public static int FourOfAKind = 300;
+        public static int StraightFlush = 10000;
     }
 }

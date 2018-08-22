@@ -1,14 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using Carubbi.Cards;
 
 namespace Carubbi.Truco
 {
-    static class Rules
+    internal static class Rules
     {
-
         public static bool IsManilha(Card c, Card orientadorManilha)
         {
             return c.Value == orientadorManilha.Value + 1;
@@ -19,7 +15,7 @@ namespace Carubbi.Truco
             if (IsManilha(c, orientadorManilha))
                 return 11;
 
-            switch(c.Value)
+            switch (c.Value)
             {
                 case 3:
                     return 10;
@@ -45,10 +41,5 @@ namespace Carubbi.Truco
                     throw new ApplicationException("Invalid Card");
             }
         }
-
-
     }
-
-
-
 }

@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Collections.Generic;
 using System.Text;
 using Carubbi.Cards;
 
@@ -13,42 +11,21 @@ namespace Carubbi.BlackJack
             Hand = new CardSet();
         }
 
-        public CardSet Hand
-        {
-            get;
-            set;
-        }
+        public CardSet Hand { get; set; }
 
 
-        public bool HasBlackJack
-        {
-            get
-            {
-                return Rules.IsBlackJack(Hand);
-            }
-        
-        }
+        public bool HasBlackJack => Rules.IsBlackJack(Hand);
 
-        public List<int> Points
-        {
-            get
-            {
-                return Rules.CalculatePoints(Hand);
-
-            }
-
-
-        }
+        public List<int> Points => Rules.CalculatePoints(Hand);
 
         public string PointsInfo
         {
             get
             {
-                StringBuilder stbPoints = new StringBuilder();
-                bool first = true;
-                foreach (int result in Points)
-                {
-                    if (this.HasBlackJack)
+                var stbPoints = new StringBuilder();
+                var first = true;
+                foreach (var result in Points)
+                    if (HasBlackJack)
                     {
                         return "BJ";
                     }
@@ -65,28 +42,18 @@ namespace Carubbi.BlackJack
                             first = false;
                         }
                     }
-                }
 
-                int minorResult = int.MaxValue;
+                var minorResult = int.MaxValue;
                 if (string.IsNullOrEmpty(stbPoints.ToString()))
                 {
-                    foreach (int result in Points)
-                    {
+                    foreach (var result in Points)
                         if (result < minorResult)
                             minorResult = result;
-                    }
                     stbPoints.Append(minorResult);
                 }
 
                 return stbPoints.ToString();
             }
-
-
         }
-
-
-
-
-
     }
 }
