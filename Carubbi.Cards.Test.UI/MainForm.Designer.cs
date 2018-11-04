@@ -112,7 +112,7 @@
             this.TitleLabel.Name = "TitleLabel";
             this.TitleLabel.Size = new System.Drawing.Size(747, 48);
             this.TitleLabel.TabIndex = 1;
-            this.TitleLabel.Text = "Carubbi.Cards.Test.UI";
+            this.TitleLabel.Text = "Carubbi Cards Deck Test";
             // 
             // iconPictureBox
             // 

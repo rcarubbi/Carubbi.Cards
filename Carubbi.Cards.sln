@@ -23,13 +23,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Carubbi.Truco", "Carubbi.Tr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Carubbi.Truco.UI", "Carubbi.Truco.UI\Carubbi.Truco.UI.csproj", "{261075D7-83CE-48C0-83C7-6CFED8C31EF1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Carubbi.RobaMonte", "Carubbi.RobaMonte\Carubbi.RobaMonte.csproj", "{9BE2F5C1-32ED-44DA-BDA4-90C82E27BF4D}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Carubbi.Cards.WinForms", "Carubbi.Cards.WinForms\Carubbi.Cards.WinForms.csproj", "{86F4F039-0057-43F9-AA70-0BDF4BE1FB19}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CardGameProjectTemplate", "CardGameProjectTemplate\CardGameProjectTemplate.csproj", "{8F79B246-D5A4-4C5A-A5D2-6F4F1B79F162}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Carubbi.Cards.Test.UI", "Carubbi.Cards.Test.UI\Carubbi.Cards.Test.UI.csproj", "{02ED9BD4-F731-4F79-83A1-4B54AAF18641}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Carubbi.RobaMonte", "Carubbi.RobaMonte\Carubbi.RobaMonte.csproj", "{936B98B3-4835-4B44-80B3-94B82C709989}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -77,10 +77,6 @@ Global
 		{261075D7-83CE-48C0-83C7-6CFED8C31EF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{261075D7-83CE-48C0-83C7-6CFED8C31EF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{261075D7-83CE-48C0-83C7-6CFED8C31EF1}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9BE2F5C1-32ED-44DA-BDA4-90C82E27BF4D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9BE2F5C1-32ED-44DA-BDA4-90C82E27BF4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9BE2F5C1-32ED-44DA-BDA4-90C82E27BF4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9BE2F5C1-32ED-44DA-BDA4-90C82E27BF4D}.Release|Any CPU.Build.0 = Release|Any CPU
 		{86F4F039-0057-43F9-AA70-0BDF4BE1FB19}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{86F4F039-0057-43F9-AA70-0BDF4BE1FB19}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{86F4F039-0057-43F9-AA70-0BDF4BE1FB19}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -93,6 +89,10 @@ Global
 		{02ED9BD4-F731-4F79-83A1-4B54AAF18641}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{02ED9BD4-F731-4F79-83A1-4B54AAF18641}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{02ED9BD4-F731-4F79-83A1-4B54AAF18641}.Release|Any CPU.Build.0 = Release|Any CPU
+		{936B98B3-4835-4B44-80B3-94B82C709989}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{936B98B3-4835-4B44-80B3-94B82C709989}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{936B98B3-4835-4B44-80B3-94B82C709989}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{936B98B3-4835-4B44-80B3-94B82C709989}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
