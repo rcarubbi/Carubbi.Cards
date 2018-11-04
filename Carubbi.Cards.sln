@@ -29,6 +29,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Carubbi.RobaMonte", "Carubb
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Carubbi.Cards.WinForms", "Carubbi.Cards.WinForms\Carubbi.Cards.WinForms.csproj", "{86F4F039-0057-43F9-AA70-0BDF4BE1FB19}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CardGameProjectTemplate", "CardGameProjectTemplate\CardGameProjectTemplate.csproj", "{8F79B246-D5A4-4C5A-A5D2-6F4F1B79F162}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -87,6 +89,10 @@ Global
 		{86F4F039-0057-43F9-AA70-0BDF4BE1FB19}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{86F4F039-0057-43F9-AA70-0BDF4BE1FB19}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{86F4F039-0057-43F9-AA70-0BDF4BE1FB19}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8F79B246-D5A4-4C5A-A5D2-6F4F1B79F162}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F79B246-D5A4-4C5A-A5D2-6F4F1B79F162}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F79B246-D5A4-4C5A-A5D2-6F4F1B79F162}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F79B246-D5A4-4C5A-A5D2-6F4F1B79F162}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
