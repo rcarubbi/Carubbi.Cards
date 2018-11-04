@@ -44,7 +44,7 @@ namespace Carubbi.Cards
         public void Shuffle(bool reseed)
         {
             PrepareShuffler(reseed);
-            for (var i = 0; i < Count * 100; i++) PutMiddle(GetRamdom());
+            for (var i = 0; i < Count * 100; i++) PutMiddle(GetRandom());
         }
 
         public void Fill()
@@ -90,7 +90,7 @@ namespace Carubbi.Cards
             }
         }
 
-        public Card GetRamdom()
+        public Card GetRandom()
         {
             if (!IsEmpty)
             {

@@ -41,6 +41,7 @@ namespace Carubbi.Cards.Test.UI
                 cardImage.Image = card.Image;
                 cardImage.Tag = card;
                 cardImage.Click += cardImage_Click;
+               
                 panel.Controls.Add(cardImage);
             }
         }
@@ -80,7 +81,7 @@ namespace Carubbi.Cards.Test.UI
 
         private void btnQualquer_Click(object sender, EventArgs e)
         {
-            _hand.PutBottom(_deck.GetRamdom());
+            _hand.PutBottom(_deck.GetRandom());
             RefreshPanel(pnlCards, _deck);
             RefreshPanel(pnlHand, _hand);
         }
