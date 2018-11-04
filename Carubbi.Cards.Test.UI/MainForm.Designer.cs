@@ -34,6 +34,7 @@
             this.headerPanel = new System.Windows.Forms.Panel();
             this.TitleLabel = new System.Windows.Forms.Label();
             this.iconPictureBox = new System.Windows.Forms.PictureBox();
+            this.GameNumberLabel = new System.Windows.Forms.Label();
             this.mainPanel = new System.Windows.Forms.Panel();
             this.HandPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.DeckPanel = new System.Windows.Forms.FlowLayoutPanel();
@@ -42,10 +43,9 @@
             this.TopToBottomButton = new System.Windows.Forms.Button();
             this.BottomToBottomButton = new System.Windows.Forms.Button();
             this.GetRandomButton = new System.Windows.Forms.Button();
-            this.GameNumberLabel = new System.Windows.Forms.Label();
-            this.GetFrom = new System.Windows.Forms.Button();
             this.GetFromPanel = new System.Windows.Forms.Panel();
             this.GetFromIndexTextBox = new System.Windows.Forms.NumericUpDown();
+            this.GetFrom = new System.Windows.Forms.Button();
             this.PutToTopButton = new System.Windows.Forms.Button();
             this.PutToBottomButton = new System.Windows.Forms.Button();
             this.PutToRandomButton = new System.Windows.Forms.Button();
@@ -125,6 +125,18 @@
             this.iconPictureBox.TabIndex = 0;
             this.iconPictureBox.TabStop = false;
             // 
+            // GameNumberLabel
+            // 
+            this.GameNumberLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.GameNumberLabel.BackColor = System.Drawing.Color.Transparent;
+            this.GameNumberLabel.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GameNumberLabel.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.GameNumberLabel.Location = new System.Drawing.Point(981, 47);
+            this.GameNumberLabel.Name = "GameNumberLabel";
+            this.GameNumberLabel.Size = new System.Drawing.Size(167, 44);
+            this.GameNumberLabel.TabIndex = 3;
+            this.GameNumberLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // mainPanel
             // 
             this.mainPanel.BackgroundImage = global::Carubbi.Cards.Test.UI.Properties.Resources.bg;
@@ -140,22 +152,26 @@
             // 
             // HandPanel
             // 
+            this.HandPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.HandPanel.AutoScroll = true;
-            this.HandPanel.BackColor = System.Drawing.Color.Transparent;
-            this.HandPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.HandPanel.Location = new System.Drawing.Point(675, 0);
+            this.HandPanel.BackColor = System.Drawing.Color.DarkGreen;
+            this.HandPanel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.HandPanel.Location = new System.Drawing.Point(656, 31);
             this.HandPanel.Name = "HandPanel";
-            this.HandPanel.Size = new System.Drawing.Size(578, 739);
+            this.HandPanel.Size = new System.Drawing.Size(545, 655);
             this.HandPanel.TabIndex = 4;
             // 
             // DeckPanel
             // 
+            this.DeckPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.DeckPanel.AutoScroll = true;
-            this.DeckPanel.BackColor = System.Drawing.Color.Transparent;
-            this.DeckPanel.Dock = System.Windows.Forms.DockStyle.Left;
-            this.DeckPanel.Location = new System.Drawing.Point(0, 0);
+            this.DeckPanel.BackColor = System.Drawing.Color.DarkGreen;
+            this.DeckPanel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.DeckPanel.Location = new System.Drawing.Point(62, 31);
             this.DeckPanel.Name = "DeckPanel";
-            this.DeckPanel.Size = new System.Drawing.Size(675, 739);
+            this.DeckPanel.Size = new System.Drawing.Size(548, 655);
             this.DeckPanel.TabIndex = 3;
             // 
             // buttonsPanel
@@ -239,33 +255,6 @@
             this.GetRandomButton.UseVisualStyleBackColor = true;
             this.GetRandomButton.Click += new System.EventHandler(this.GetRandomButton_Click);
             // 
-            // GameNumberLabel
-            // 
-            this.GameNumberLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.GameNumberLabel.BackColor = System.Drawing.Color.Transparent;
-            this.GameNumberLabel.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GameNumberLabel.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.GameNumberLabel.Location = new System.Drawing.Point(981, 47);
-            this.GameNumberLabel.Name = "GameNumberLabel";
-            this.GameNumberLabel.Size = new System.Drawing.Size(167, 44);
-            this.GameNumberLabel.TabIndex = 3;
-            this.GameNumberLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // GetFrom
-            // 
-            this.GetFrom.FlatAppearance.BorderSize = 0;
-            this.GetFrom.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.GetFrom.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(63)))), ((int)(((byte)(70)))));
-            this.GetFrom.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.GetFrom.ForeColor = System.Drawing.Color.White;
-            this.GetFrom.Location = new System.Drawing.Point(3, 3);
-            this.GetFrom.Name = "GetFrom";
-            this.GetFrom.Size = new System.Drawing.Size(88, 41);
-            this.GetFrom.TabIndex = 6;
-            this.GetFrom.Text = "Get From";
-            this.GetFrom.UseVisualStyleBackColor = true;
-            this.GetFrom.Click += new System.EventHandler(this.GetFrom_Click);
-            // 
             // GetFromPanel
             // 
             this.GetFromPanel.Controls.Add(this.GetFromIndexTextBox);
@@ -281,6 +270,21 @@
             this.GetFromIndexTextBox.Name = "GetFromIndexTextBox";
             this.GetFromIndexTextBox.Size = new System.Drawing.Size(46, 23);
             this.GetFromIndexTextBox.TabIndex = 7;
+            // 
+            // GetFrom
+            // 
+            this.GetFrom.FlatAppearance.BorderSize = 0;
+            this.GetFrom.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.GetFrom.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(63)))), ((int)(((byte)(70)))));
+            this.GetFrom.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.GetFrom.ForeColor = System.Drawing.Color.White;
+            this.GetFrom.Location = new System.Drawing.Point(3, 3);
+            this.GetFrom.Name = "GetFrom";
+            this.GetFrom.Size = new System.Drawing.Size(88, 41);
+            this.GetFrom.TabIndex = 6;
+            this.GetFrom.Text = "Get From";
+            this.GetFrom.UseVisualStyleBackColor = true;
+            this.GetFrom.Click += new System.EventHandler(this.GetFrom_Click);
             // 
             // PutToTopButton
             // 
@@ -368,6 +372,7 @@
             this.Controls.Add(this.mainPanel);
             this.Controls.Add(this.headerPanel);
             this.Controls.Add(this.buttonsPanel);
+            this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));

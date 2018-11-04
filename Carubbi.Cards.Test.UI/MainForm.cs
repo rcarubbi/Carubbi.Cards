@@ -26,22 +26,26 @@ namespace Carubbi.Cards.Test.UI
 
         private void RefreshPanel(Panel panel, CardSet cardset)
         {
+
             SuspendLayout();
+            
             panel.SuspendLayout();
             
             panel.Controls.Clear();
             
-             
+
             foreach (var card in cardset)
             {
                 var cardImage = new CardBox { Card = card };
-                cardImage.SuspendLayout();
+                 
                 cardImage.Click += CardImage_Click;
                 panel.Controls.Add(cardImage);
-                cardImage.ResumeLayout();
+              
             }
+         
             panel.ResumeLayout();
             ResumeLayout();
+            panel.Visible = true;
         }
 
         private void CardImage_Click(object sender, EventArgs e)

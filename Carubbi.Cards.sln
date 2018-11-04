@@ -9,8 +9,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Carubbi.BlackJack.UI", "Car
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Carubbi.Cards", "Carubbi.Cards\Carubbi.Cards.csproj", "{1491ED5C-868B-4E08-AF44-4F2C4C7AEF7E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Carubbi.Cards.Test.UI.Old", "Carubbi.Cards.Test.UI.Old\Carubbi.Cards.Test.UI.Old.csproj", "{84D04396-A2C4-4DEF-A8B1-5B24F65DC58D}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Carubbi.SlotCard", "Carubbi.SlotCard\Carubbi.SlotCard.csproj", "{FD3F4BE7-0A7F-4AD6-AA94-9CDC593A5F96}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Carubbi.SlotCard.UI", "Carubbi.SlotCard.UI\Carubbi.SlotCard.UI.csproj", "{7F0B25F9-61F8-4464-B081-6805089C9965}"
@@ -51,10 +49,6 @@ Global
 		{1491ED5C-868B-4E08-AF44-4F2C4C7AEF7E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1491ED5C-868B-4E08-AF44-4F2C4C7AEF7E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1491ED5C-868B-4E08-AF44-4F2C4C7AEF7E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{84D04396-A2C4-4DEF-A8B1-5B24F65DC58D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{84D04396-A2C4-4DEF-A8B1-5B24F65DC58D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{84D04396-A2C4-4DEF-A8B1-5B24F65DC58D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{84D04396-A2C4-4DEF-A8B1-5B24F65DC58D}.Release|Any CPU.Build.0 = Release|Any CPU
 		{FD3F4BE7-0A7F-4AD6-AA94-9CDC593A5F96}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{FD3F4BE7-0A7F-4AD6-AA94-9CDC593A5F96}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FD3F4BE7-0A7F-4AD6-AA94-9CDC593A5F96}.Release|Any CPU.ActiveCfg = Release|Any CPU
