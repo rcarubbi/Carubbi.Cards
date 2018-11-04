@@ -56,6 +56,9 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Carubbi.Cards, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Carubbi.Cards.1.1.0\lib\net461\Carubbi.Cards.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
@@ -95,6 +98,7 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <None Include="app.config" />
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -106,10 +110,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Carubbi.Cards\Carubbi.Cards.csproj">
-      <Project>{1491ED5C-868B-4E08-AF44-4F2C4C7AEF7E}</Project>
-      <Name>Carubbi.Cards</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Carubbi.SlotCard\Carubbi.SlotCard.csproj">
       <Project>{FD3F4BE7-0A7F-4AD6-AA94-9CDC593A5F96}</Project>
       <Name>Carubbi.SlotCard</Name>
