@@ -4,14 +4,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{936B98B3-4835-4B44-80B3-94B82C709989}</ProjectGuid>
+    <ProjectGuid>{AA6A8E7D-7D27-441E-8E22-D231ACFBF53A}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>Carubbi.RobaMonte</RootNamespace>
-    <AssemblyName>Carubbi.RobaMonte</AssemblyName>
+    <RootNamespace>Carubbi.Sabao</RootNamespace>
+    <AssemblyName>Carubbi.Sabao</AssemblyName>
     <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
   </PropertyGroup>
@@ -41,12 +42,6 @@
     <Reference Include="Carubbi.Cards.WinForms, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Carubbi.Cards.WinForms.1.1.0\lib\net462\Carubbi.Cards.WinForms.dll</HintPath>
     </Reference>
-    <Reference Include="Carubbi.Extensions, Version=1.2.3.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Carubbi.Extensions.1.2.3\lib\net462\Carubbi.Extensions.dll</HintPath>
-    </Reference>
-    <Reference Include="NConcern, Version=1.0.0.0, Culture=neutral, PublicKeyToken=7ec21d9f1f8dcaf9, processorArchitecture=MSIL">
-      <HintPath>..\packages\NConcern.4.1.0\lib\NConcern.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -61,6 +56,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Logic\Game.cs" />
+    <Compile Include="Logic\Player.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -82,7 +78,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <None Include="packages.config" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -103,11 +101,4 @@
     <None Include="Resources\cards-icon.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <Import Project="..\packages\CNeptune.1.2.1\build\CNeptune.targets" Condition="Exists('..\packages\CNeptune.1.2.1\build\CNeptune.targets')" />
-  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
-    <PropertyGroup>
-      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
-    </PropertyGroup>
-    <Error Condition="!Exists('..\packages\CNeptune.1.2.1\build\CNeptune.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\CNeptune.1.2.1\build\CNeptune.targets'))" />
-  </Target>
 </Project>

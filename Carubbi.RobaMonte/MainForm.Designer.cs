@@ -32,9 +32,9 @@
             this.QuitButton = new System.Windows.Forms.Button();
             this.StartButton = new System.Windows.Forms.Button();
             this.headerPanel = new System.Windows.Forms.Panel();
+            this.GameNumberLabel = new System.Windows.Forms.Label();
             this.TitleLabel = new System.Windows.Forms.Label();
             this.iconPictureBox = new System.Windows.Forms.PictureBox();
-            this.GameNumberLabel = new System.Windows.Forms.Label();
             this.mainPanel = new System.Windows.Forms.Panel();
             this.splitPanel = new System.Windows.Forms.SplitContainer();
             this.p2Panel = new System.Windows.Forms.Panel();
@@ -102,6 +102,18 @@
             this.headerPanel.Size = new System.Drawing.Size(1314, 94);
             this.headerPanel.TabIndex = 1;
             // 
+            // GameNumberLabel
+            // 
+            this.GameNumberLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.GameNumberLabel.BackColor = System.Drawing.Color.Transparent;
+            this.GameNumberLabel.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GameNumberLabel.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.GameNumberLabel.Location = new System.Drawing.Point(1038, 47);
+            this.GameNumberLabel.Name = "GameNumberLabel";
+            this.GameNumberLabel.Size = new System.Drawing.Size(167, 44);
+            this.GameNumberLabel.TabIndex = 2;
+            this.GameNumberLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // TitleLabel
             // 
             this.TitleLabel.Font = new System.Drawing.Font("Roboto", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -122,18 +134,6 @@
             this.iconPictureBox.Size = new System.Drawing.Size(103, 94);
             this.iconPictureBox.TabIndex = 0;
             this.iconPictureBox.TabStop = false;
-            // 
-            // GameNumberLabel
-            // 
-            this.GameNumberLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.GameNumberLabel.BackColor = System.Drawing.Color.Transparent;
-            this.GameNumberLabel.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GameNumberLabel.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.GameNumberLabel.Location = new System.Drawing.Point(1038, 47);
-            this.GameNumberLabel.Name = "GameNumberLabel";
-            this.GameNumberLabel.Size = new System.Drawing.Size(167, 44);
-            this.GameNumberLabel.TabIndex = 2;
-            this.GameNumberLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // mainPanel
             // 
@@ -281,6 +281,7 @@
             this.Controls.Add(this.mainPanel);
             this.Controls.Add(this.headerPanel);
             this.Controls.Add(this.buttonsPanel);
+            this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));

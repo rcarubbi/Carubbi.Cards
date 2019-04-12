@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.27703.2035
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Carubbi.BlackJack", "Carubbi.BlackJack\Carubbi.BlackJack.csproj", "{56CA6B3A-8300-4DA3-A266-157A54D3EB80}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Carubbi.BlackJack.UI", "Carubbi.BlackJack.UI\Carubbi.BlackJack.UI.csproj", "{734314EE-A90D-4F7A-B874-B5312F47F7DE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Carubbi.BlackJack.UI.Old", "Carubbi.BlackJack.UI\Carubbi.BlackJack.UI.Old.csproj", "{734314EE-A90D-4F7A-B874-B5312F47F7DE}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Carubbi.Cards", "Carubbi.Cards\Carubbi.Cards.csproj", "{1491ED5C-868B-4E08-AF44-4F2C4C7AEF7E}"
 EndProject
@@ -30,6 +30,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Carubbi.Cards.Test.UI", "Carubbi.Cards.Test.UI\Carubbi.Cards.Test.UI.csproj", "{02ED9BD4-F731-4F79-83A1-4B54AAF18641}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Carubbi.RobaMonte", "Carubbi.RobaMonte\Carubbi.RobaMonte.csproj", "{936B98B3-4835-4B44-80B3-94B82C709989}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Carubbi.Sabao", "Carubbi.Sabao\Carubbi.Sabao.csproj", "{AA6A8E7D-7D27-441E-8E22-D231ACFBF53A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -93,6 +95,10 @@ Global
 		{936B98B3-4835-4B44-80B3-94B82C709989}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{936B98B3-4835-4B44-80B3-94B82C709989}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{936B98B3-4835-4B44-80B3-94B82C709989}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AA6A8E7D-7D27-441E-8E22-D231ACFBF53A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA6A8E7D-7D27-441E-8E22-D231ACFBF53A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA6A8E7D-7D27-441E-8E22-D231ACFBF53A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA6A8E7D-7D27-441E-8E22-D231ACFBF53A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

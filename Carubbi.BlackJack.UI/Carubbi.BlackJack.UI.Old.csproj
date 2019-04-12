@@ -8,8 +8,8 @@
     <ProjectGuid>{734314EE-A90D-4F7A-B874-B5312F47F7DE}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Carubbi.BlackJack.UI</RootNamespace>
-    <AssemblyName>Carubbi.BlackJack.UI</AssemblyName>
+    <RootNamespace>Carubbi.BlackJack.UI.Old</RootNamespace>
+    <AssemblyName>Carubbi.BlackJack.UI.Old</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <TargetFrameworkProfile>
     </TargetFrameworkProfile>

@@ -37,14 +37,13 @@ namespace Carubbi.BlackJack
                 PickCard(false);
                 GiveCard();
                 GiveCard();
-                if (CurrentGame.Player.HasBlackJack)
-                {
-                    Hand[Hand.Count - 1].Turn();
-                    if (HasBlackJack)
-                        Push();
-                    else
-                        PayBlackJack();
-                }
+                if (!CurrentGame.Player.HasBlackJack) return;
+
+                Hand[Hand.Count - 1].Turn();
+                if (HasBlackJack)
+                    Push();
+                else
+                    PayBlackJack();
             }
             else
             {
@@ -63,40 +62,34 @@ namespace Carubbi.BlackJack
         public void PayBlackJack()
         {
             CurrentGame.Player.Credits += CurrentGame.BetValue * 1.5m;
-            if (playerWins != null)
-                playerWins(this, new EventArgs());
+            playerWins?.Invoke(this, new EventArgs());
 
             CurrentGame.Player.Hand.Clear();
             Hand.Clear();
             CurrentGame.BetValue = 0;
-            if (afterPlayerWins != null)
-                afterPlayerWins(this, new EventArgs());
+            afterPlayerWins?.Invoke(this, new EventArgs());
         }
 
         public void PlayerWins()
         {
             CurrentGame.Player.Credits += CurrentGame.BetValue;
-            if (playerWins != null)
-                playerWins(this, new EventArgs());
+            playerWins?.Invoke(this, new EventArgs());
 
             CurrentGame.Player.Hand.Clear();
             Hand.Clear();
             CurrentGame.BetValue = 0;
-            if (afterPlayerWins != null)
-                afterPlayerWins(this, new EventArgs());
+            afterPlayerWins?.Invoke(this, new EventArgs());
         }
 
 
         public void DealerWins()
         {
-            if (gameOver != null)
-                gameOver(this, new EventArgs());
+            gameOver?.Invoke(this, new EventArgs());
 
             CurrentGame.Player.Hand.Clear();
             Hand.Clear();
             CurrentGame.BetValue = 0;
-            if (afterGameOver != null)
-                afterGameOver(this, new EventArgs());
+            afterGameOver?.Invoke(this, new EventArgs());
         }
 
         public void GiveCard()
@@ -148,11 +141,11 @@ namespace Carubbi.BlackJack
                             break;
                         }
 
-                        if (Rules.CalculateBestPoints(Hand) >= Rules.CalculateBestPoints(CurrentGame.Player.Hand))
-                        {
-                            DealerWins();
-                            break;
-                        }
+                        if (Rules.CalculateBestPoints(Hand) < Rules.CalculateBestPoints(CurrentGame.Player.Hand))
+                            continue;
+
+                        DealerWins();
+                        break;
                     }
                 else
                     PlayerWins();
