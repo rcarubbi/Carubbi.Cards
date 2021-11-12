@@ -54,7 +54,7 @@ namespace CardGameProjectTemplate
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            _game = new Logic.Game();
+            _game = new Game();
             _game.PropertyChanged += _game_PropertyChanged;
         }
     }
