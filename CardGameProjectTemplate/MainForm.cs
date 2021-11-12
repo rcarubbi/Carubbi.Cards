@@ -16,8 +16,7 @@ namespace CardGameProjectTemplate
          
         private void StartButton_Click(object sender, EventArgs e)
         {
-            _game = new Logic.Game();
-            _game.PropertyChanged += _game_PropertyChanged;
+           
             _game.Start();
         }
 
@@ -51,6 +50,12 @@ namespace CardGameProjectTemplate
                 return;
 
             Environment.Exit(0);
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            _game = new Logic.Game();
+            _game.PropertyChanged += _game_PropertyChanged;
         }
     }
 }

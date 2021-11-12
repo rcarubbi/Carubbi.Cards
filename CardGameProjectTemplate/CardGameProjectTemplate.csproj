@@ -34,6 +34,18 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Carubbi.Cards, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Carubbi.Cards.1.2.0.0\lib\net472\Carubbi.Cards.dll</HintPath>
+    </Reference>
+    <Reference Include="Carubbi.Cards.WinForms, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Carubbi.Cards.WinForms.1.2.0.0\lib\net472\Carubbi.Cards.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Carubbi.Extensions, Version=1.2.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Carubbi.Extensions.1.2.3\lib\net462\Carubbi.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Carubbi.Utils, Version=1.7.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Carubbi.Utils.1.7.0.0\lib\net45\Carubbi.Utils.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -88,16 +100,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\cards-icon.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Carubbi.Cards.WinForms\Carubbi.Cards.WinForms.csproj">
-      <Project>{86f4f039-0057-43f9-aa70-0bdf4be1fb19}</Project>
-      <Name>Carubbi.Cards.WinForms</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Carubbi.Cards\Carubbi.Cards.csproj">
-      <Project>{1491ed5c-868b-4e08-af44-4f2c4c7aef7e}</Project>
-      <Name>Carubbi.Cards</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
