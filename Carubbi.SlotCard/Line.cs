@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using Carubbi.Cards;
+using Carubbi.Utils.Data;
 
 namespace Carubbi.SlotCard
 {
@@ -21,7 +22,7 @@ namespace Carubbi.SlotCard
         public int Result()
         {
             _cardsToAnalyse = Cards;
-            var valueComparer = new CardValueComparer();
+            var valueComparer = new GenericMultipleComparer<Card>(nameof(Card.Value), SortDirection.Ascending);
 
 
             _cardsToAnalyse.Sort(valueComparer);
