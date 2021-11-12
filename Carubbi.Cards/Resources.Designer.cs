@@ -19,7 +19,7 @@ namespace Carubbi.Cards {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     public class Resources {
@@ -57,6 +57,15 @@ namespace Carubbi.Cards {
             }
             set {
                 resourceCulture = value;
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ace.
+        /// </summary>
+        public static string Ace {
+            get {
+                return ResourceManager.GetString("Ace", resourceCulture);
             }
         }
         
@@ -201,6 +210,15 @@ namespace Carubbi.Cards {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Clubs.
+        /// </summary>
+        public static string Clubs {
+            get {
+                return ResourceManager.GetString("Clubs", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         public static System.Drawing.Bitmap D01 {
@@ -327,6 +345,51 @@ namespace Carubbi.Cards {
             get {
                 object obj = ResourceManager.GetObject("D13", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Diamonds.
+        /// </summary>
+        public static string Diamonds {
+            get {
+                return ResourceManager.GetString("Diamonds", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Eight.
+        /// </summary>
+        public static string Eight {
+            get {
+                return ResourceManager.GetString("Eight", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Five.
+        /// </summary>
+        public static string Five {
+            get {
+                return ResourceManager.GetString("Five", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Four.
+        /// </summary>
+        public static string Four {
+            get {
+                return ResourceManager.GetString("Four", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {0} of {1}.
+        /// </summary>
+        public static string FullNamePattern {
+            get {
+                return ResourceManager.GetString("FullNamePattern", resourceCulture);
             }
         }
         
@@ -461,6 +524,51 @@ namespace Carubbi.Cards {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Hearts.
+        /// </summary>
+        public static string Hearts {
+            get {
+                return ResourceManager.GetString("Hearts", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Jack.
+        /// </summary>
+        public static string Jack {
+            get {
+                return ResourceManager.GetString("Jack", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to King.
+        /// </summary>
+        public static string King {
+            get {
+                return ResourceManager.GetString("King", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Nine.
+        /// </summary>
+        public static string Nine {
+            get {
+                return ResourceManager.GetString("Nine", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Queen.
+        /// </summary>
+        public static string Queen {
+            get {
+                return ResourceManager.GetString("Queen", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         public static System.Drawing.Bitmap S01 {
@@ -587,6 +695,60 @@ namespace Carubbi.Cards {
             get {
                 object obj = ResourceManager.GetObject("S13", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Seven.
+        /// </summary>
+        public static string Seven {
+            get {
+                return ResourceManager.GetString("Seven", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Six.
+        /// </summary>
+        public static string Six {
+            get {
+                return ResourceManager.GetString("Six", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Spades.
+        /// </summary>
+        public static string Spades {
+            get {
+                return ResourceManager.GetString("Spades", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ten.
+        /// </summary>
+        public static string Ten {
+            get {
+                return ResourceManager.GetString("Ten", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Three.
+        /// </summary>
+        public static string Three {
+            get {
+                return ResourceManager.GetString("Three", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Two.
+        /// </summary>
+        public static string Two {
+            get {
+                return ResourceManager.GetString("Two", resourceCulture);
             }
         }
     }

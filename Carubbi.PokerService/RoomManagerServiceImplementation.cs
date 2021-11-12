@@ -45,7 +45,7 @@ namespace Carubbi.PokerServices
                 server.DeleteRoom(guidRoom);
                 return true;
             }
-            catch (Exception ex)
+            catch
             {
                 return false;
             }
@@ -68,7 +68,7 @@ namespace Carubbi.PokerServices
                 room.Join(seat, player);
                 return true;
             }
-            catch (Exception ex)
+            catch  
             {
                 return false;
             }

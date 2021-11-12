@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Drawing;
-
+using Carubbi.Extensions;
 namespace Carubbi.Cards
 {
     public class Card
@@ -10,14 +10,14 @@ namespace Carubbi.Cards
 
         private string _name;
 
-        public Card(Suit naipe, int value, bool startClosed)
+        public Card(Suit suit, int value, bool startClosed)
         {
-            Naipe = naipe;
+            Suit = suit;
             Value = value;
             IsClosed = startClosed;
         }
 
-        public Suit Naipe { get; }
+        public Suit Suit { get; }
 
         public int Value { get; }
 
@@ -45,7 +45,7 @@ namespace Carubbi.Cards
             }
         }
 
-        public string CompleteName => string.Format("{0} de {1}", Name, Naipe);
+        public string CompleteName => string.Format(Resources.FullNamePattern, Name, Suit.Text());
 
         public event EventHandler opened;
         public event EventHandler closed;
@@ -80,43 +80,43 @@ namespace Carubbi.Cards
             switch (Value)
             {
                 case 1:
-                    name = "ás";
+                    name = Resources.Ace;
                     break;
                 case 2:
-                    name = "dois";
+                    name = Resources.Two;
                     break;
                 case 3:
-                    name = "três";
+                    name = Resources.Three;
                     break;
                 case 4:
-                    name = "quatro";
+                    name = Resources.Four;
                     break;
                 case 5:
-                    name = "cinco";
+                    name = Resources.Five;
                     break;
                 case 6:
-                    name = "seis";
+                    name = Resources.Six;
                     break;
                 case 7:
-                    name = "sete";
+                    name = Resources.Seven;
                     break;
                 case 8:
-                    name = "oito";
+                    name = Resources.Eight;
                     break;
                 case 9:
-                    name = "nove";
+                    name = Resources.Nine;
                     break;
                 case 10:
-                    name = "dez";
+                    name = Resources.Ten;
                     break;
                 case 11:
-                    name = "valete";
+                    name = Resources.Jack;
                     break;
                 case 12:
-                    name = "dama";
+                    name = Resources.Queen;
                     break;
                 case 13:
-                    name = "rei";
+                    name = Resources.King;
                     break;
             }
 
@@ -125,9 +125,9 @@ namespace Carubbi.Cards
 
         private Bitmap CheckImage()
         {
-            switch (Naipe)
+            switch (Suit)
             {
-                case Suit.Copas:
+                case Suit.Hearts:
                     switch (Value)
                     {
                         case 1:
@@ -159,7 +159,7 @@ namespace Carubbi.Cards
                         default:
                             return null;
                     }
-                case Suit.Espadas:
+                case Suit.Spades:
                     switch (Value)
                     {
                         case 1:
@@ -191,7 +191,7 @@ namespace Carubbi.Cards
                         default:
                             return null;
                     }
-                case Suit.Ouros:
+                case Suit.Diamonds:
                     switch (Value)
                     {
                         case 1:
@@ -223,7 +223,7 @@ namespace Carubbi.Cards
                         default:
                             return null;
                     }
-                case Suit.Paus:
+                case Suit.Clubs:
                     switch (Value)
                     {
                         case 1:

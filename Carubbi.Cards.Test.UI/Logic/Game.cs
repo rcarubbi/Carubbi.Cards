@@ -28,7 +28,19 @@ namespace Carubbi.Cards.Test.UI.Logic
             }
         }
 
-
+        private GameStates _state;
+        public GameStates State
+        {
+            get
+            {
+                return _state;
+            }
+            set
+            {
+                _state = value;
+                OnPropertyChanged();
+            }
+        }
 
         private CardSet _hand;
 
@@ -60,7 +72,6 @@ namespace Carubbi.Cards.Test.UI.Logic
         protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-
         }
 
         public void Start()
@@ -71,8 +82,7 @@ namespace Carubbi.Cards.Test.UI.Logic
 
             Hand.Clear();
             Hand = Hand;
-            
-         
+            State = GameStates.Started;
         }
 
         public void TurnCard(Card card)
@@ -106,7 +116,7 @@ namespace Carubbi.Cards.Test.UI.Logic
 
         public void GetRandom()
         {
-            Hand.PutBottom(Deck.GetRamdom());
+            Hand.PutBottom(Deck.GetRandom());
             Deck = Deck;
             Hand = Hand;
         }

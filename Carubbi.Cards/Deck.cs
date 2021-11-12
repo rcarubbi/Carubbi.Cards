@@ -58,10 +58,10 @@ namespace Carubbi.Cards
                 Clear();
 
             var suits = new List<Suit>();
-            suits.Add(Suit.Copas);
-            suits.Add(Suit.Espadas);
-            suits.Add(Suit.Ouros);
-            suits.Add(Suit.Paus);
+            suits.Add(Suit.Hearts);
+            suits.Add(Suit.Spades);
+            suits.Add(Suit.Diamonds);
+            suits.Add(Suit.Clubs);
 
             foreach (var suit in suits)
                 for (var i = 1; i <= 13; i++)

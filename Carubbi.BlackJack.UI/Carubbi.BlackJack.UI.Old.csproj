@@ -10,7 +10,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Carubbi.BlackJack.UI.Old</RootNamespace>
     <AssemblyName>Carubbi.BlackJack.UI.Old</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <TargetFrameworkProfile>
     </TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
@@ -90,11 +90,11 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Carubbi.BlackJack\Carubbi.BlackJack.csproj">
-      <Project>{56CA6B3A-8300-4DA3-A266-157A54D3EB80}</Project>
+      <Project>{56ca6b3a-8300-4da3-a266-157a54d3eb80}</Project>
       <Name>Carubbi.BlackJack</Name>
     </ProjectReference>
     <ProjectReference Include="..\Carubbi.Cards\Carubbi.Cards.csproj">
-      <Project>{1491ED5C-868B-4E08-AF44-4F2C4C7AEF7E}</Project>
+      <Project>{1491ed5c-868b-4e08-af44-4f2c4c7aef7e}</Project>
       <Name>Carubbi.Cards</Name>
     </ProjectReference>
   </ItemGroup>

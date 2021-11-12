@@ -165,10 +165,10 @@ namespace Carubbi.SlotCard
 
         private bool ContainsFlush(List<Card> Cards)
         {
-            return Cards[0].Naipe == Cards[1].Naipe &&
-                   Cards[0].Naipe == Cards[2].Naipe &&
-                   Cards[0].Naipe == Cards[3].Naipe &&
-                   Cards[0].Naipe == Cards[4].Naipe;
+            return Cards[0].Suit == Cards[1].Suit &&
+                   Cards[0].Suit == Cards[2].Suit &&
+                   Cards[0].Suit == Cards[3].Suit &&
+                   Cards[0].Suit == Cards[4].Suit;
         }
 
         private bool ContainsStraight(List<Card> Cards)

@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Ace" xml:space="preserve">
-    <value>Ace</value>
+    <value>Ás</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="Back" type="System.Resources.ResXFileRef, System.Windows.Forms">
@@ -164,7 +164,7 @@
     <value>Images\C13.PNG;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Clubs" xml:space="preserve">
-    <value>Clubs</value>
+    <value>Paus</value>
   </data>
   <data name="D01" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Images\D01.PNG;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -206,19 +206,19 @@
     <value>Images\D13.PNG;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Diamonds" xml:space="preserve">
-    <value>Diamonds</value>
+    <value>Ouros</value>
   </data>
   <data name="Eight" xml:space="preserve">
-    <value>Eight</value>
+    <value>Oito</value>
   </data>
   <data name="Five" xml:space="preserve">
-    <value>Five</value>
+    <value>Cinco</value>
   </data>
   <data name="Four" xml:space="preserve">
-    <value>Four</value>
+    <value>Quatro</value>
   </data>
   <data name="FullNamePattern" xml:space="preserve">
-    <value>{0} of {1}</value>
+    <value>{0} de {1}</value>
   </data>
   <data name="H01" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Images\H01.PNG;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -260,19 +260,19 @@
     <value>Images\H13.PNG;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Hearts" xml:space="preserve">
-    <value>Hearts</value>
+    <value>Copas</value>
   </data>
   <data name="Jack" xml:space="preserve">
-    <value>Jack</value>
+    <value>Valete</value>
   </data>
   <data name="King" xml:space="preserve">
-    <value>King</value>
+    <value>Rei</value>
   </data>
   <data name="Nine" xml:space="preserve">
-    <value>Nine</value>
+    <value>Nove</value>
   </data>
   <data name="Queen" xml:space="preserve">
-    <value>Queen</value>
+    <value>Dama</value>
   </data>
   <data name="S01" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Images\S01.PNG;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -314,21 +314,21 @@
     <value>Images\S13.PNG;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Seven" xml:space="preserve">
-    <value>Seven</value>
+    <value>Sete</value>
   </data>
   <data name="Six" xml:space="preserve">
-    <value>Six</value>
+    <value>Seis</value>
   </data>
   <data name="Spades" xml:space="preserve">
-    <value>Spades</value>
+    <value>Espadas</value>
   </data>
   <data name="Ten" xml:space="preserve">
-    <value>Ten</value>
+    <value>Dez</value>
   </data>
   <data name="Three" xml:space="preserve">
-    <value>Three</value>
+    <value>Três</value>
   </data>
   <data name="Two" xml:space="preserve">
-    <value>Two</value>
+    <value>Dois</value>
   </data>
 </root>

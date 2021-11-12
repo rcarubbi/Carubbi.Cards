@@ -8,9 +8,9 @@ namespace Carubbi.Cards
 
         public int Compare(Card x, Card y)
         {
-            if ((int) x.Naipe > (int) y.Naipe)
+            if ((int) x.Suit > (int) y.Suit)
                 return 1;
-            if ((int) y.Naipe > (int) x.Naipe)
+            if ((int) y.Suit > (int) x.Suit)
                 return -1;
             return 0;
         }

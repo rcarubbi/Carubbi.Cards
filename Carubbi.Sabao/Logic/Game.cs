@@ -113,6 +113,27 @@ namespace Carubbi.Sabao.Logic
 
         public Player Player1 { get; set; }
         public Player Player2 { get; set; }
+        public int PlayerTurn { get; internal set; }
+        public Card P1C1 { get; internal set; }
+        public Card P1C2 { get; internal set; }
+        public Card P1C3 { get; internal set; }
+        public Card P1C4 { get; internal set; }
+        public Card P1C5 { get; internal set; }
+        public Card P1C6 { get; internal set; }
+        public Card P1C7 { get; internal set; }
+        public Card P1C8 { get; internal set; }
+        public Card P1C9 { get; internal set; }
+        public Card P1C10 { get; internal set; }
+        public Card P2C1 { get; internal set; }
+        public Card P2C2 { get; internal set; }
+        public Card P2C3 { get; internal set; }
+        public Card P2C4 { get; internal set; }
+        public Card P2C5 { get; internal set; }
+        public Card P2C6 { get; internal set; }
+        public Card P2C7 { get; internal set; }
+        public Card P2C8 { get; internal set; }
+        public Card P2C9 { get; internal set; }
+        public Card P2C10 { get; internal set; }
 
         protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
         {

@@ -8,10 +8,11 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>Carubbi.Cards.Test.UI</RootNamespace>
     <AssemblyName>Carubbi.Cards.Test.UI</AssemblyName>
-    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -33,12 +34,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Carubbi.Cards, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Carubbi.Cards.1.1.0\lib\net461\Carubbi.Cards.dll</HintPath>
-    </Reference>
-    <Reference Include="Carubbi.Cards.WinForms, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Carubbi.Cards.WinForms.1.1.0\lib\net462\Carubbi.Cards.WinForms.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -53,6 +48,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Logic\Game.cs" />
+    <Compile Include="Logic\GameStates.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -93,6 +89,16 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\cards-icon.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Carubbi.Cards.WinForms\Carubbi.Cards.WinForms.csproj">
+      <Project>{86f4f039-0057-43f9-aa70-0bdf4be1fb19}</Project>
+      <Name>Carubbi.Cards.WinForms</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Carubbi.Cards\Carubbi.Cards.csproj">
+      <Project>{1491ed5c-868b-4e08-af44-4f2c4c7aef7e}</Project>
+      <Name>Carubbi.Cards</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -88,6 +88,7 @@
             this.StartButton.Name = "StartButton";
             this.StartButton.Size = new System.Drawing.Size(158, 46);
             this.StartButton.TabIndex = 0;
+            this.StartButton.Tag = "Stopped";
             this.StartButton.Text = "Start";
             this.StartButton.UseVisualStyleBackColor = true;
             this.StartButton.Click += new System.EventHandler(this.StartButton_Click);
@@ -106,7 +107,7 @@
             // 
             // TitleLabel
             // 
-            this.TitleLabel.Font = new System.Drawing.Font("Roboto", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TitleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TitleLabel.ForeColor = System.Drawing.Color.White;
             this.TitleLabel.Location = new System.Drawing.Point(17, 9);
             this.TitleLabel.Name = "TitleLabel";
@@ -129,7 +130,7 @@
             // 
             this.GameNumberLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.GameNumberLabel.BackColor = System.Drawing.Color.Transparent;
-            this.GameNumberLabel.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GameNumberLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GameNumberLabel.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.GameNumberLabel.Location = new System.Drawing.Point(981, 47);
             this.GameNumberLabel.Name = "GameNumberLabel";
@@ -206,6 +207,7 @@
             this.ShuffleButton.Name = "ShuffleButton";
             this.ShuffleButton.Size = new System.Drawing.Size(158, 46);
             this.ShuffleButton.TabIndex = 2;
+            this.ShuffleButton.Tag = "Started";
             this.ShuffleButton.Text = "Shuffle";
             this.ShuffleButton.UseVisualStyleBackColor = true;
             this.ShuffleButton.Click += new System.EventHandler(this.ShuffleButton_Click);
@@ -221,6 +223,7 @@
             this.TopToBottomButton.Name = "TopToBottomButton";
             this.TopToBottomButton.Size = new System.Drawing.Size(158, 46);
             this.TopToBottomButton.TabIndex = 3;
+            this.TopToBottomButton.Tag = "Started";
             this.TopToBottomButton.Text = "Get From Top";
             this.TopToBottomButton.UseVisualStyleBackColor = true;
             this.TopToBottomButton.Click += new System.EventHandler(this.TopToBottomButton_Click);
@@ -236,6 +239,7 @@
             this.BottomToBottomButton.Name = "BottomToBottomButton";
             this.BottomToBottomButton.Size = new System.Drawing.Size(158, 46);
             this.BottomToBottomButton.TabIndex = 4;
+            this.BottomToBottomButton.Tag = "Started";
             this.BottomToBottomButton.Text = "Get From Bottom";
             this.BottomToBottomButton.UseVisualStyleBackColor = true;
             this.BottomToBottomButton.Click += new System.EventHandler(this.BottomToBottomButton_Click);
@@ -251,6 +255,7 @@
             this.GetRandomButton.Name = "GetRandomButton";
             this.GetRandomButton.Size = new System.Drawing.Size(158, 46);
             this.GetRandomButton.TabIndex = 5;
+            this.GetRandomButton.Tag = "Started";
             this.GetRandomButton.Text = "Get Random";
             this.GetRandomButton.UseVisualStyleBackColor = true;
             this.GetRandomButton.Click += new System.EventHandler(this.GetRandomButton_Click);
@@ -268,7 +273,7 @@
             // 
             this.GetFromIndexTextBox.Location = new System.Drawing.Point(97, 13);
             this.GetFromIndexTextBox.Name = "GetFromIndexTextBox";
-            this.GetFromIndexTextBox.Size = new System.Drawing.Size(46, 23);
+            this.GetFromIndexTextBox.Size = new System.Drawing.Size(46, 22);
             this.GetFromIndexTextBox.TabIndex = 7;
             // 
             // GetFrom
@@ -282,6 +287,7 @@
             this.GetFrom.Name = "GetFrom";
             this.GetFrom.Size = new System.Drawing.Size(88, 41);
             this.GetFrom.TabIndex = 6;
+            this.GetFrom.Tag = "Started";
             this.GetFrom.Text = "Get From";
             this.GetFrom.UseVisualStyleBackColor = true;
             this.GetFrom.Click += new System.EventHandler(this.GetFrom_Click);
@@ -297,6 +303,7 @@
             this.PutToTopButton.Name = "PutToTopButton";
             this.PutToTopButton.Size = new System.Drawing.Size(158, 46);
             this.PutToTopButton.TabIndex = 8;
+            this.PutToTopButton.Tag = "Started";
             this.PutToTopButton.Text = "Put to top";
             this.PutToTopButton.UseVisualStyleBackColor = true;
             this.PutToTopButton.Click += new System.EventHandler(this.PutToTopButton_Click);
@@ -312,6 +319,7 @@
             this.PutToBottomButton.Name = "PutToBottomButton";
             this.PutToBottomButton.Size = new System.Drawing.Size(158, 46);
             this.PutToBottomButton.TabIndex = 9;
+            this.PutToBottomButton.Tag = "Started";
             this.PutToBottomButton.Text = "Put To Bottom";
             this.PutToBottomButton.UseVisualStyleBackColor = true;
             this.PutToBottomButton.Click += new System.EventHandler(this.PutToBottomButton_Click);
@@ -327,6 +335,7 @@
             this.PutToRandomButton.Name = "PutToRandomButton";
             this.PutToRandomButton.Size = new System.Drawing.Size(158, 46);
             this.PutToRandomButton.TabIndex = 10;
+            this.PutToRandomButton.Tag = "Started";
             this.PutToRandomButton.Text = "Put To Random";
             this.PutToRandomButton.UseVisualStyleBackColor = true;
             this.PutToRandomButton.Click += new System.EventHandler(this.PutToRandomButton_Click);
@@ -344,7 +353,7 @@
             // 
             this.PutToIndexTextBox.Location = new System.Drawing.Point(97, 13);
             this.PutToIndexTextBox.Name = "PutToIndexTextBox";
-            this.PutToIndexTextBox.Size = new System.Drawing.Size(46, 23);
+            this.PutToIndexTextBox.Size = new System.Drawing.Size(46, 22);
             this.PutToIndexTextBox.TabIndex = 7;
             // 
             // PutToButton
@@ -358,13 +367,14 @@
             this.PutToButton.Name = "PutToButton";
             this.PutToButton.Size = new System.Drawing.Size(88, 41);
             this.PutToButton.TabIndex = 6;
+            this.PutToButton.Tag = "Started";
             this.PutToButton.Text = "Put to";
             this.PutToButton.UseVisualStyleBackColor = true;
             this.PutToButton.Click += new System.EventHandler(this.PutToButton_Click);
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -373,12 +383,13 @@
             this.Controls.Add(this.headerPanel);
             this.Controls.Add(this.buttonsPanel);
             this.DoubleBuffered = true;
-            this.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "MainForm";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.MainForm_Load);
             this.headerPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox)).EndInit();
             this.mainPanel.ResumeLayout(false);

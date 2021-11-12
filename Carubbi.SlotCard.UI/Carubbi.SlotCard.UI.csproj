@@ -10,7 +10,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Carubbi.SlotCard.UI</RootNamespace>
     <AssemblyName>Carubbi.SlotCard.UI</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <FileUpgradeFlags>
     </FileUpgradeFlags>
@@ -56,9 +56,6 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Carubbi.Cards, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Carubbi.Cards.1.1.0\lib\net461\Carubbi.Cards.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
@@ -110,6 +107,10 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Carubbi.Cards\Carubbi.Cards.csproj">
+      <Project>{1491ed5c-868b-4e08-af44-4f2c4c7aef7e}</Project>
+      <Name>Carubbi.Cards</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Carubbi.SlotCard\Carubbi.SlotCard.csproj">
       <Project>{FD3F4BE7-0A7F-4AD6-AA94-9CDC593A5F96}</Project>
       <Name>Carubbi.SlotCard</Name>
