@@ -209,6 +209,33 @@ namespace Carubbi.Sabao.Logic
             }
         }
 
-
+        internal bool IsValid(int value)
+        {
+            switch (value)
+            {
+                case 1:
+                    return C1.IsClosed;
+                case 2:
+                    return C2.IsClosed;
+                case 3:
+                    return C3.IsClosed;
+                case 4:
+                    return C4.IsClosed;
+                case 5:
+                    return C5.IsClosed;
+                case 6:
+                    return C6.IsClosed;
+                case 7:
+                    return C7.IsClosed;
+                case 8:
+                    return C8.IsClosed;
+                case 9:
+                    return C9.IsClosed;
+                case 10:
+                    return C10.IsClosed;
+                default:
+                    return false;
+            }
+        }
     }
 }

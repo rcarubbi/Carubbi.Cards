@@ -181,7 +181,15 @@ namespace Carubbi.Sabao.Logic
 
             TopDiscardCard = CurrentPlayer.HeldCard;
             CurrentPlayer.HeldCard = null;
+
             EndTurn();
+
+            if (IsDrawMatch())
+            {
+                CurrentPlayer = null;
+                GameOver = true;
+            }
+            
         }
 
         private void EndTurn()
@@ -257,15 +265,13 @@ namespace Carubbi.Sabao.Logic
             {
                 GameOver = true;
             }
-
-            if (TopDiscardCard?.Value > 10 && DeckCard == null)
-            {
-                CurrentPlayer = null;
-                GameOver = true;
-            }
         }
 
-
+        private bool IsDrawMatch()
+        {
+            return ((TopDiscardCard?.Value > 10 || !CurrentPlayer.IsValid(TopDiscardCard?.Value ?? 0)) && DeckCard == null);
+            
+        }
     }
 
 

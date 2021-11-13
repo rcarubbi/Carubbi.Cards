@@ -116,7 +116,7 @@ namespace Carubbi.Sabao
                     P2C10.Card = _game.Player2.C10;
                     break;
                 case "CurrentPlayer":
-                    NotificationLabel.Text = $"Jogador {_game.CurrentPlayer.Number}, é sua vez de jogar";
+                    NotificationLabel.Text = $"Jogador {_game.CurrentPlayer?.Number}, é sua vez de jogar";
                     HeldCard.Card = _game.CurrentPlayer?.HeldCard;
                     break;
                 
