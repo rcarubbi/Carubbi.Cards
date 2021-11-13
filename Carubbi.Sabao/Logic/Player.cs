@@ -1,4 +1,5 @@
 ﻿using Carubbi.Cards;
+using System;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 
@@ -18,24 +19,11 @@ namespace Carubbi.Sabao.Logic
             }
         }
 
-        public Player(CardSet deck)
+        public Player(int playerNumber)
         {
-            InitializeCards(deck);
+            Number = playerNumber;
         }
 
-        private void InitializeCards(CardSet deck)
-        {
-            C1 = deck.GetTop();
-            C2 = deck.GetTop();
-            C3 = deck.GetTop();
-            C4 = deck.GetTop();
-            C5 = deck.GetTop();
-            C6 = deck.GetTop();
-            C7 = deck.GetTop();
-            C8 = deck.GetTop();
-            C9 = deck.GetTop();
-            C10 = deck.GetTop();
-        }
 
         public event PropertyChangedEventHandler PropertyChanged;
 
@@ -152,7 +140,10 @@ namespace Carubbi.Sabao.Logic
             }
         }
 
+
+
         private Card _c10;
+
 
         public Card C10
         {
@@ -163,5 +154,61 @@ namespace Carubbi.Sabao.Logic
                 OnPropertyChanged();
             }
         }
+
+        public int Number { get; private set; }
+        public bool Won { get
+            {
+                return !C1.IsClosed && C1.Value == 1
+                    && !C2.IsClosed && C2.Value == 2
+                    && !C3.IsClosed && C3.Value == 3
+                    && !C4.IsClosed && C4.Value == 4
+                    && !C5.IsClosed && C5.Value == 5
+                    && !C6.IsClosed && C6.Value == 6
+                    && !C7.IsClosed && C7.Value == 7
+                    && !C8.IsClosed && C8.Value == 8
+                    && !C9.IsClosed && C9.Value == 9
+                    && !C10.IsClosed && C10.Value == 10;
+            }
+        }
+
+        internal void SetCard(Card nextCard, int cardPosition)
+        {
+
+            switch (cardPosition)
+            {
+                case 1:
+                    C1 = nextCard;
+                    break;
+                case 2:
+                    C2 = nextCard;
+                    break;
+                case 3:
+                    C3 = nextCard;
+                    break;
+                case 4:
+                    C4 = nextCard;
+                    break;
+                case 5:
+                    C5 = nextCard;
+                    break;
+                case 6:
+                    C6 = nextCard;
+                    break;
+                case 7:
+                    C7 = nextCard;
+                    break;
+                case 8:
+                    C8 = nextCard;
+                    break;
+                case 9:
+                    C9 = nextCard;
+                    break;
+                case 10:
+                    C10 = nextCard;
+                    break;
+            }
+        }
+
+
     }
 }

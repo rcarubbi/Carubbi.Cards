@@ -36,6 +36,8 @@
             this.iconPictureBox = new System.Windows.Forms.PictureBox();
             this.GameNumberLabel = new System.Windows.Forms.Label();
             this.mainPanel = new System.Windows.Forms.Panel();
+            this.HeldCard = new Carubbi.Cards.WinForms.CardBox();
+            this.NotificationLabel = new System.Windows.Forms.Label();
             this.splitPanel = new System.Windows.Forms.SplitContainer();
             this.P1InnerPanel = new System.Windows.Forms.Panel();
             this.P1C5 = new Carubbi.Cards.WinForms.CardBox();
@@ -64,9 +66,11 @@
             this.buttonsPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.DiscardButton = new System.Windows.Forms.Button();
             this.GetFromDeckButton = new System.Windows.Forms.Button();
+            this.GetFromDiscardPileButton = new System.Windows.Forms.Button();
             this.headerPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox)).BeginInit();
             this.mainPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.HeldCard)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitPanel)).BeginInit();
             this.splitPanel.Panel1.SuspendLayout();
             this.splitPanel.Panel2.SuspendLayout();
@@ -141,7 +145,7 @@
             // 
             // TitleLabel
             // 
-            this.TitleLabel.Font = new System.Drawing.Font("Roboto", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TitleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TitleLabel.ForeColor = System.Drawing.Color.White;
             this.TitleLabel.Location = new System.Drawing.Point(17, 9);
             this.TitleLabel.Name = "TitleLabel";
@@ -162,21 +166,23 @@
             // 
             // GameNumberLabel
             // 
-            this.GameNumberLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.GameNumberLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.GameNumberLabel.BackColor = System.Drawing.Color.Transparent;
-            this.GameNumberLabel.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GameNumberLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GameNumberLabel.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.GameNumberLabel.Location = new System.Drawing.Point(1097, 684);
+            this.GameNumberLabel.Location = new System.Drawing.Point(1000, 31);
             this.GameNumberLabel.Name = "GameNumberLabel";
-            this.GameNumberLabel.Size = new System.Drawing.Size(167, 44);
+            this.GameNumberLabel.Size = new System.Drawing.Size(264, 27);
             this.GameNumberLabel.TabIndex = 2;
-            this.GameNumberLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.GameNumberLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // mainPanel
             // 
             this.mainPanel.BackgroundImage = global::Carubbi.Sabao.Properties.Resources.bg;
             this.mainPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.mainPanel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.mainPanel.Controls.Add(this.HeldCard);
+            this.mainPanel.Controls.Add(this.NotificationLabel);
             this.mainPanel.Controls.Add(this.splitPanel);
             this.mainPanel.Controls.Add(this.DiscardCardBox);
             this.mainPanel.Controls.Add(this.DeckCardBox);
@@ -187,11 +193,35 @@
             this.mainPanel.Size = new System.Drawing.Size(1284, 743);
             this.mainPanel.TabIndex = 2;
             // 
+            // HeldCard
+            // 
+            this.HeldCard.BackColor = System.Drawing.Color.Transparent;
+            this.HeldCard.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("HeldCard.BackgroundImage")));
+            this.HeldCard.Card = null;
+            this.HeldCard.Location = new System.Drawing.Point(4, 129);
+            this.HeldCard.Name = "HeldCard";
+            this.HeldCard.Size = new System.Drawing.Size(85, 119);
+            this.HeldCard.TabIndex = 22;
+            this.HeldCard.TabStop = false;
+            this.HeldCard.Click += new System.EventHandler(this.HeldCard_Click);
+            // 
+            // NotificationLabel
+            // 
+            this.NotificationLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.NotificationLabel.BackColor = System.Drawing.Color.Transparent;
+            this.NotificationLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NotificationLabel.ForeColor = System.Drawing.Color.White;
+            this.NotificationLabel.Location = new System.Drawing.Point(1000, 4);
+            this.NotificationLabel.Name = "NotificationLabel";
+            this.NotificationLabel.Size = new System.Drawing.Size(264, 27);
+            this.NotificationLabel.TabIndex = 6;
+            this.NotificationLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
             // splitPanel
             // 
             this.splitPanel.BackColor = System.Drawing.Color.Transparent;
             this.splitPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.splitPanel.Location = new System.Drawing.Point(0, 399);
+            this.splitPanel.Location = new System.Drawing.Point(0, 278);
             this.splitPanel.Name = "splitPanel";
             // 
             // splitPanel.Panel1
@@ -201,7 +231,7 @@
             // splitPanel.Panel2
             // 
             this.splitPanel.Panel2.Controls.Add(this.P2InnerPanel);
-            this.splitPanel.Size = new System.Drawing.Size(1280, 340);
+            this.splitPanel.Size = new System.Drawing.Size(1280, 461);
             this.splitPanel.SplitterDistance = 678;
             this.splitPanel.TabIndex = 5;
             // 
@@ -223,7 +253,7 @@
             this.P1InnerPanel.Controls.Add(this.P1C2);
             this.P1InnerPanel.Location = new System.Drawing.Point(23, 15);
             this.P1InnerPanel.Name = "P1InnerPanel";
-            this.P1InnerPanel.Size = new System.Drawing.Size(643, 310);
+            this.P1InnerPanel.Size = new System.Drawing.Size(643, 431);
             this.P1InnerPanel.TabIndex = 0;
             // 
             // P1C5
@@ -236,6 +266,8 @@
             this.P1C5.Size = new System.Drawing.Size(85, 119);
             this.P1C5.TabIndex = 24;
             this.P1C5.TabStop = false;
+            this.P1C5.Tag = "5";
+            this.P1C5.Click += new System.EventHandler(this.Card_Click);
             // 
             // P1C1
             // 
@@ -247,6 +279,8 @@
             this.P1C1.Size = new System.Drawing.Size(85, 119);
             this.P1C1.TabIndex = 20;
             this.P1C1.TabStop = false;
+            this.P1C1.Tag = "1";
+            this.P1C1.Click += new System.EventHandler(this.Card_Click);
             // 
             // P1C7
             // 
@@ -258,6 +292,8 @@
             this.P1C7.Size = new System.Drawing.Size(85, 119);
             this.P1C7.TabIndex = 26;
             this.P1C7.TabStop = false;
+            this.P1C7.Tag = "7";
+            this.P1C7.Click += new System.EventHandler(this.Card_Click);
             // 
             // P1C10
             // 
@@ -269,6 +305,8 @@
             this.P1C10.Size = new System.Drawing.Size(85, 119);
             this.P1C10.TabIndex = 29;
             this.P1C10.TabStop = false;
+            this.P1C10.Tag = "10";
+            this.P1C10.Click += new System.EventHandler(this.Card_Click);
             // 
             // P1C4
             // 
@@ -280,6 +318,8 @@
             this.P1C4.Size = new System.Drawing.Size(85, 119);
             this.P1C4.TabIndex = 23;
             this.P1C4.TabStop = false;
+            this.P1C4.Tag = "4";
+            this.P1C4.Click += new System.EventHandler(this.Card_Click);
             // 
             // P1C3
             // 
@@ -291,6 +331,8 @@
             this.P1C3.Size = new System.Drawing.Size(85, 119);
             this.P1C3.TabIndex = 22;
             this.P1C3.TabStop = false;
+            this.P1C3.Tag = "3";
+            this.P1C3.Click += new System.EventHandler(this.Card_Click);
             // 
             // P1C6
             // 
@@ -302,6 +344,8 @@
             this.P1C6.Size = new System.Drawing.Size(85, 119);
             this.P1C6.TabIndex = 25;
             this.P1C6.TabStop = false;
+            this.P1C6.Tag = "6";
+            this.P1C6.Click += new System.EventHandler(this.Card_Click);
             // 
             // P1C9
             // 
@@ -313,6 +357,8 @@
             this.P1C9.Size = new System.Drawing.Size(85, 119);
             this.P1C9.TabIndex = 28;
             this.P1C9.TabStop = false;
+            this.P1C9.Tag = "9";
+            this.P1C9.Click += new System.EventHandler(this.Card_Click);
             // 
             // P1C8
             // 
@@ -324,6 +370,8 @@
             this.P1C8.Size = new System.Drawing.Size(85, 119);
             this.P1C8.TabIndex = 27;
             this.P1C8.TabStop = false;
+            this.P1C8.Tag = "8";
+            this.P1C8.Click += new System.EventHandler(this.Card_Click);
             // 
             // P1C2
             // 
@@ -335,6 +383,8 @@
             this.P1C2.Size = new System.Drawing.Size(85, 119);
             this.P1C2.TabIndex = 21;
             this.P1C2.TabStop = false;
+            this.P1C2.Tag = "2";
+            this.P1C2.Click += new System.EventHandler(this.Card_Click);
             // 
             // P2InnerPanel
             // 
@@ -353,18 +403,21 @@
             this.P2InnerPanel.Controls.Add(this.P2C2);
             this.P2InnerPanel.Location = new System.Drawing.Point(17, 15);
             this.P2InnerPanel.Name = "P2InnerPanel";
-            this.P2InnerPanel.Size = new System.Drawing.Size(571, 310);
+            this.P2InnerPanel.Size = new System.Drawing.Size(571, 431);
             this.P2InnerPanel.TabIndex = 1;
             // 
             // P2C5
             // 
             this.P2C5.BackColor = System.Drawing.Color.Transparent;
+            this.P2C5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("P2C5.BackgroundImage")));
             this.P2C5.Card = null;
             this.P2C5.Location = new System.Drawing.Point(428, 37);
             this.P2C5.Name = "P2C5";
             this.P2C5.Size = new System.Drawing.Size(85, 119);
             this.P2C5.TabIndex = 24;
             this.P2C5.TabStop = false;
+            this.P2C5.Tag = "5";
+            this.P2C5.Click += new System.EventHandler(this.Card_Click);
             // 
             // P2C1
             // 
@@ -376,6 +429,8 @@
             this.P2C1.Size = new System.Drawing.Size(85, 119);
             this.P2C1.TabIndex = 20;
             this.P2C1.TabStop = false;
+            this.P2C1.Tag = "1";
+            this.P2C1.Click += new System.EventHandler(this.Card_Click);
             // 
             // P2C7
             // 
@@ -387,16 +442,21 @@
             this.P2C7.Size = new System.Drawing.Size(85, 119);
             this.P2C7.TabIndex = 26;
             this.P2C7.TabStop = false;
+            this.P2C7.Tag = "7";
+            this.P2C7.Click += new System.EventHandler(this.Card_Click);
             // 
             // P2C10
             // 
             this.P2C10.BackColor = System.Drawing.Color.Transparent;
+            this.P2C10.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("P2C10.BackgroundImage")));
             this.P2C10.Card = null;
             this.P2C10.Location = new System.Drawing.Point(428, 162);
             this.P2C10.Name = "P2C10";
             this.P2C10.Size = new System.Drawing.Size(85, 119);
             this.P2C10.TabIndex = 29;
             this.P2C10.TabStop = false;
+            this.P2C10.Tag = "10";
+            this.P2C10.Click += new System.EventHandler(this.Card_Click);
             // 
             // P2C4
             // 
@@ -408,6 +468,8 @@
             this.P2C4.Size = new System.Drawing.Size(85, 119);
             this.P2C4.TabIndex = 23;
             this.P2C4.TabStop = false;
+            this.P2C4.Tag = "4";
+            this.P2C4.Click += new System.EventHandler(this.Card_Click);
             // 
             // P2C3
             // 
@@ -419,6 +481,8 @@
             this.P2C3.Size = new System.Drawing.Size(85, 119);
             this.P2C3.TabIndex = 22;
             this.P2C3.TabStop = false;
+            this.P2C3.Tag = "3";
+            this.P2C3.Click += new System.EventHandler(this.Card_Click);
             // 
             // P2C6
             // 
@@ -430,6 +494,8 @@
             this.P2C6.Size = new System.Drawing.Size(85, 119);
             this.P2C6.TabIndex = 25;
             this.P2C6.TabStop = false;
+            this.P2C6.Tag = "6";
+            this.P2C6.Click += new System.EventHandler(this.Card_Click);
             // 
             // P2C9
             // 
@@ -441,6 +507,8 @@
             this.P2C9.Size = new System.Drawing.Size(85, 119);
             this.P2C9.TabIndex = 28;
             this.P2C9.TabStop = false;
+            this.P2C9.Tag = "9";
+            this.P2C9.Click += new System.EventHandler(this.Card_Click);
             // 
             // P2C8
             // 
@@ -452,6 +520,8 @@
             this.P2C8.Size = new System.Drawing.Size(85, 119);
             this.P2C8.TabIndex = 27;
             this.P2C8.TabStop = false;
+            this.P2C8.Tag = "8";
+            this.P2C8.Click += new System.EventHandler(this.Card_Click);
             // 
             // P2C2
             // 
@@ -463,6 +533,8 @@
             this.P2C2.Size = new System.Drawing.Size(85, 119);
             this.P2C2.TabIndex = 21;
             this.P2C2.TabStop = false;
+            this.P2C2.Tag = "2";
+            this.P2C2.Click += new System.EventHandler(this.Card_Click);
             // 
             // DiscardCardBox
             // 
@@ -474,6 +546,7 @@
             this.DiscardCardBox.Size = new System.Drawing.Size(85, 119);
             this.DiscardCardBox.TabIndex = 4;
             this.DiscardCardBox.TabStop = false;
+            this.DiscardCardBox.Click += new System.EventHandler(this.DiscardCardBox_Click);
             // 
             // DeckCardBox
             // 
@@ -494,6 +567,7 @@
             this.buttonsPanel.Controls.Add(this.StartButton);
             this.buttonsPanel.Controls.Add(this.DiscardButton);
             this.buttonsPanel.Controls.Add(this.GetFromDeckButton);
+            this.buttonsPanel.Controls.Add(this.GetFromDiscardPileButton);
             this.buttonsPanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.buttonsPanel.FlowDirection = System.Windows.Forms.FlowDirection.BottomUp;
             this.buttonsPanel.Location = new System.Drawing.Point(0, 0);
@@ -514,7 +588,6 @@
             this.DiscardButton.TabIndex = 2;
             this.DiscardButton.Text = "Discard";
             this.DiscardButton.UseVisualStyleBackColor = true;
-            this.DiscardButton.Visible = false;
             this.DiscardButton.Click += new System.EventHandler(this.DiscardButton_Click);
             // 
             // GetFromDeckButton
@@ -530,12 +603,26 @@
             this.GetFromDeckButton.TabIndex = 3;
             this.GetFromDeckButton.Text = "Get from deck";
             this.GetFromDeckButton.UseVisualStyleBackColor = true;
-            this.GetFromDeckButton.Visible = false;
             this.GetFromDeckButton.Click += new System.EventHandler(this.GetFromDeckButton_Click);
+            // 
+            // GetFromDiscardPileButton
+            // 
+            this.GetFromDiscardPileButton.FlatAppearance.BorderSize = 0;
+            this.GetFromDiscardPileButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.GetFromDiscardPileButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(63)))), ((int)(((byte)(70)))));
+            this.GetFromDiscardPileButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.GetFromDiscardPileButton.ForeColor = System.Drawing.Color.White;
+            this.GetFromDiscardPileButton.Location = new System.Drawing.Point(3, 640);
+            this.GetFromDiscardPileButton.Name = "GetFromDiscardPileButton";
+            this.GetFromDiscardPileButton.Size = new System.Drawing.Size(133, 34);
+            this.GetFromDiscardPileButton.TabIndex = 4;
+            this.GetFromDiscardPileButton.Text = "Get from discard pile";
+            this.GetFromDiscardPileButton.UseVisualStyleBackColor = true;
+            this.GetFromDiscardPileButton.Click += new System.EventHandler(this.GetFromDiscardPileButton_Click);
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -543,15 +630,17 @@
             this.Controls.Add(this.mainPanel);
             this.Controls.Add(this.headerPanel);
             this.Controls.Add(this.buttonsPanel);
-            this.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "MainForm";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.MainForm_Load);
             this.headerPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox)).EndInit();
             this.mainPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.HeldCard)).EndInit();
             this.splitPanel.Panel1.ResumeLayout(false);
             this.splitPanel.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitPanel)).EndInit();
@@ -621,6 +710,9 @@
         private Cards.WinForms.CardBox P2C2;
         private System.Windows.Forms.Button DiscardButton;
         private System.Windows.Forms.Button GetFromDeckButton;
+        private System.Windows.Forms.Label NotificationLabel;
+        private System.Windows.Forms.Button GetFromDiscardPileButton;
+        private Cards.WinForms.CardBox HeldCard;
     }
 }
 
