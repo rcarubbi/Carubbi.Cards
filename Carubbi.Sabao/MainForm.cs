@@ -10,7 +10,15 @@ namespace Carubbi.Sabao
     {
         public MainForm()
         {
+           
+
             InitializeComponent();
+
+            splitPanel.ResumeLayout();
+            buttonsPanel.ResumeLayout();
+            P1InnerPanel.ResumeLayout();
+            P2InnerPanel.ResumeLayout();
+            ResumeLayout();
         }
 
         private Game _game;
@@ -25,7 +33,11 @@ namespace Carubbi.Sabao
         private void _game_PropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
         {
             SuspendLayout();
-
+            splitPanel.SuspendLayout();
+            buttonsPanel.SuspendLayout();
+            P1InnerPanel.SuspendLayout();
+            P2InnerPanel.SuspendLayout();
+            
             RefreshButtons();
 
             switch (e.PropertyName)
@@ -122,7 +134,10 @@ namespace Carubbi.Sabao
                 
             }
 
-
+            splitPanel.ResumeLayout();
+            buttonsPanel.ResumeLayout();
+            P1InnerPanel.ResumeLayout();
+            P2InnerPanel.ResumeLayout();
             ResumeLayout();
         }
 
@@ -205,9 +220,12 @@ namespace Carubbi.Sabao
 
         private void MainForm_Load(object sender, EventArgs e)
         {
+           
+
             _game = new Game();
             _game.PropertyChanged += _game_PropertyChanged;
             RefreshButtons();
+ 
         }
 
         private void DiscardCardBox_Click(object sender, EventArgs e)
