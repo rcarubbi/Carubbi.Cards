@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.27703.2035
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31321.278
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Carubbi.BlackJack", "Carubbi.BlackJack\Carubbi.BlackJack.csproj", "{56CA6B3A-8300-4DA3-A266-157A54D3EB80}"
 EndProject
@@ -32,6 +32,12 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Carubbi.RobaMonte", "Carubbi.RobaMonte\Carubbi.RobaMonte.csproj", "{936B98B3-4835-4B44-80B3-94B82C709989}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Carubbi.Sabao", "Carubbi.Sabao\Carubbi.Sabao.csproj", "{AA6A8E7D-7D27-441E-8E22-D231ACFBF53A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Images", "Images", "{1CBA4122-B70B-4417-A1AB-39CDEA049ED6}"
+	ProjectSection(SolutionItems) = preProject
+		Images\bg.jpg = Images\bg.jpg
+		Images\cards-icon.jpg = Images\cards-icon.jpg
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
