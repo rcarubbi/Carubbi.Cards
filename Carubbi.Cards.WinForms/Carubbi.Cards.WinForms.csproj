@@ -32,8 +32,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Carubbi.Cards, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Carubbi.Cards.1.1.0\lib\net461\Carubbi.Cards.dll</HintPath>
+    <Reference Include="Carubbi.Cards, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Carubbi.Cards.1.2.0.0\lib\net472\Carubbi.Cards.dll</HintPath>
+    </Reference>
+    <Reference Include="Carubbi.Extensions, Version=1.2.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Carubbi.Extensions.1.2.3\lib\net462\Carubbi.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Carubbi.Utils, Version=1.7.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Carubbi.Utils.1.7.0.0\lib\net45\Carubbi.Utils.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />

@@ -10,15 +10,7 @@ namespace Carubbi.Sabao
     {
         public MainForm()
         {
-           
-
             InitializeComponent();
-
-            splitPanel.ResumeLayout();
-            buttonsPanel.ResumeLayout();
-            P1InnerPanel.ResumeLayout();
-            P2InnerPanel.ResumeLayout();
-            ResumeLayout();
         }
 
         private Game _game;

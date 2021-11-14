@@ -37,8 +37,8 @@
     <Reference Include="Carubbi.Cards, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Carubbi.Cards.1.2.0.0\lib\net472\Carubbi.Cards.dll</HintPath>
     </Reference>
-    <Reference Include="Carubbi.Cards.WinForms, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Carubbi.Cards.WinForms.1.2.0.0\lib\net472\Carubbi.Cards.WinForms.dll</HintPath>
+    <Reference Include="Carubbi.Cards.WinForms, Version=1.2.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Carubbi.Cards.WinForms.1.2.1.0\lib\net472\Carubbi.Cards.WinForms.dll</HintPath>
     </Reference>
     <Reference Include="Carubbi.Extensions, Version=1.2.3.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Carubbi.Extensions.1.2.3\lib\net462\Carubbi.Extensions.dll</HintPath>
