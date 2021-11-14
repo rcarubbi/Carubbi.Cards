@@ -77,6 +77,7 @@ namespace CardGameProjectTemplate.Logic
 
         public void Start()
         {
+            Deck.Fill();
             Deck.Shuffle(true);
             DiscardPile = new CardSet();
             DiscardCard = null;
