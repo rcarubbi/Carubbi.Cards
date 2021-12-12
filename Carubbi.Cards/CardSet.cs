@@ -1,9 +1,13 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace Carubbi.Cards
 {
     public class CardSet : List<Card>
     {
+
+        public event EventHandler<CardSetChangedEventArgs> CardSetChanged;
+
         public bool IsEmpty => Count == 0;
 
         public Card Get(int cardIndex)
@@ -12,24 +16,31 @@ namespace Carubbi.Cards
             {
                 var card = this[cardIndex];
                 RemoveAt(cardIndex);
+                OnCardSetChanged(new CardSetChangedEventArgs { Card = card, CardIndex = cardIndex, Action = CardSetActions.CardRemoved });
                 return card;
             }
 
+         
             return null;
         }
 
         public void Set(Card card, int cardIndex)
         {
             if (card != null)
+            {
                 Insert(cardIndex, card);
+                OnCardSetChanged(new CardSetChangedEventArgs { Card = card, CardIndex = cardIndex, Action = CardSetActions.CardAdded });
+            }
         }
 
         public Card GetTop()
         {
             if (!IsEmpty)
             {
-                var card = this[0];
-                RemoveAt(0);
+                var cardIndex = 0;
+                var card = this[cardIndex];
+                RemoveAt(cardIndex);
+                OnCardSetChanged(new CardSetChangedEventArgs { Card = card, CardIndex = cardIndex, Action = CardSetActions.CardRemoved });
                 return card;
             }
 
@@ -40,8 +51,10 @@ namespace Carubbi.Cards
         {
             if (!IsEmpty)
             {
-                var card = this[Count - 1];
-                RemoveAt(Count - 1);
+                var cardIndex = Count - 1;
+                var card = this[cardIndex];
+                RemoveAt(cardIndex);
+                OnCardSetChanged(new CardSetChangedEventArgs { Card = card, CardIndex = cardIndex, Action = CardSetActions.CardRemoved });
                 return card;
             }
 
@@ -51,13 +64,26 @@ namespace Carubbi.Cards
         public void PutTop(Card card)
         {
             if (card != null)
-                Insert(0, card);
+            {
+                var cardIndex = 0;
+                Insert(cardIndex, card);
+                OnCardSetChanged(new CardSetChangedEventArgs { Card = card, CardIndex = cardIndex, Action = CardSetActions.CardAdded });
+            }
         }
 
         public void PutBottom(Card card)
         {
             if (card != null)
+            {
+                var cardIndex = Count;
                 Add(card);
+                OnCardSetChanged(new CardSetChangedEventArgs { Card = card, CardIndex = cardIndex, Action = CardSetActions.CardAdded });
+            }
+        }
+
+        protected virtual void OnCardSetChanged(CardSetChangedEventArgs e)
+        {
+            CardSetChanged?.Invoke(this, e);
         }
     }
 }

@@ -32,9 +32,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Carubbi.Cards, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Carubbi.Cards.1.2.0.0\lib\net472\Carubbi.Cards.dll</HintPath>
-    </Reference>
     <Reference Include="Carubbi.Extensions, Version=1.2.3.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Carubbi.Extensions.1.2.3\lib\net462\Carubbi.Extensions.dll</HintPath>
     </Reference>
@@ -53,6 +50,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CardSetPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CardSetPanel.Designer.cs">
+      <DependentUpon>CardSetPanel.cs</DependentUpon>
+    </Compile>
     <Compile Include="CardBox.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -64,6 +67,12 @@
   <ItemGroup>
     <None Include="Carubbi.Cards.WinForms.nuspec" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Carubbi.Cards\Carubbi.Cards.csproj">
+      <Project>{1491ed5c-868b-4e08-af44-4f2c4c7aef7e}</Project>
+      <Name>Carubbi.Cards</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

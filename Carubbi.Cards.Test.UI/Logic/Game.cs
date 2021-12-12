@@ -12,9 +12,20 @@ namespace Carubbi.Cards.Test.UI.Logic
         public Game()
         {
             Deck = new Deck(2, false);
+            Deck.CardSetChanged += Deck_CardSetChanged;
             Hand = new CardSet();
+            Hand.CardSetChanged += Hand_CardSetChanged;
         }
-        
+
+        private void Hand_CardSetChanged(object sender, CardSetChangedEventArgs e)
+        {
+            OnPropertyChanged(nameof(Hand));
+        }
+
+        private void Deck_CardSetChanged(object sender, CardSetChangedEventArgs e)
+        {
+            OnPropertyChanged(nameof(Deck));
+        }
 
         private string _gameNumber;
 
@@ -66,6 +77,8 @@ namespace Carubbi.Cards.Test.UI.Logic
             }
         }
 
+       
+
         public event PropertyChangedEventHandler PropertyChanged;
 
 
@@ -76,77 +89,66 @@ namespace Carubbi.Cards.Test.UI.Logic
 
         public void Start()
         {
-           
             Deck.Fill();
-            Deck = Deck;
-
             Hand.Clear();
-            Hand = Hand;
             State = GameStates.Started;
         }
 
         public void TurnCard(Card card)
         {
             card.Turn();
-            Deck = Deck;
-            Hand = Hand;
+            
         }
 
         public void Shuffle()
         {
             _deck.Shuffle(true);
-            Deck = Deck;
-            Hand = Hand;
+            
             GameNumber = $"#{Deck.GameNumber}";
         }
 
         public void GetFromTop()
         {
             Hand.PutBottom(Deck.GetTop());
-            Deck = Deck;
-            Hand = Hand;
+            
         }
 
         public void GetFromBottom()
         {
             Hand.PutBottom(Deck.GetBottom());
-            Deck = Deck;
-            Hand = Hand;
+         
         }
 
         public void GetRandom()
         {
             Hand.PutBottom(Deck.GetRandom());
-            Deck = Deck;
-            Hand = Hand;
+             
+         
         }
 
         public void GetFrom(decimal value)
         {
             Hand.PutBottom(Deck.Get((int)value));
-            Deck = Deck;
-            Hand = Hand;
+       
         }
 
         public void PutToTop()
         {
             Deck.PutTop(Hand.GetBottom());
-            Deck = Deck;
-            Hand = Hand;
+           
         }
 
         public void PutToBottom()
         {
             Deck.PutBottom(Hand.GetBottom());
-            Deck = Deck;
-            Hand = Hand;
+          
+       
         }
 
         public void PutToRandom()
         {
             Deck.PutMiddle(Hand.GetBottom());
-            Deck = Deck;
-            Hand = Hand;
+           
         }
 
 
@@ -154,8 +156,9 @@ namespace Carubbi.Cards.Test.UI.Logic
         {
 
             Deck.Set(Hand.GetBottom(), (int) value);
-            Deck = Deck;
-            Hand = Hand;
+       
         }
+
+       
     }
 }

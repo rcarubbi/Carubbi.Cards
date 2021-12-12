@@ -45,6 +45,7 @@ namespace Carubbi.Cards
         {
             PrepareShuffler(reseed);
             for (var i = 0; i < Count * 100; i++) PutMiddle(GetRandom());
+            OnCardSetChanged(new CardSetChangedEventArgs { Action = CardSetActions.DeckShuffled });
         }
 
         public void Fill()
@@ -66,6 +67,8 @@ namespace Carubbi.Cards
             foreach (var suit in suits)
                 for (var i = 1; i <= 13; i++)
                     Add(new Card(suit, i, _startClosed));
+
+            OnCardSetChanged(new CardSetChangedEventArgs { Action = CardSetActions.DeckFilled });
         }
 
         private void PrepareShuffler(bool reseed)
@@ -85,8 +88,9 @@ namespace Carubbi.Cards
             if (card != null)
             {
                 PrepareShuffler(false);
-                var ramdomIndex = _shuffler.Next(0, Count + 1);
-                Insert(ramdomIndex, card);
+                var randomIndex = _shuffler.Next(0, Count + 1);
+                Insert(randomIndex, card);
+                OnCardSetChanged(new CardSetChangedEventArgs { Action = CardSetActions.CardAdded, CardIndex = randomIndex, Card = card });
             }
         }
 
@@ -95,9 +99,10 @@ namespace Carubbi.Cards
             if (!IsEmpty)
             {
                 PrepareShuffler(false);
-                var ramdomIndex = _getterShuffler.Next(0, Count);
-                var card = this[ramdomIndex];
-                RemoveAt(ramdomIndex);
+                var randomIndex = _getterShuffler.Next(0, Count);
+                var card = this[randomIndex];
+                RemoveAt(randomIndex);
+                OnCardSetChanged(new CardSetChangedEventArgs { Action = CardSetActions.CardRemoved, CardIndex = randomIndex, Card = card });
                 return card;
             }
 

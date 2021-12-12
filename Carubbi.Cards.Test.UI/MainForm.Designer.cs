@@ -36,8 +36,6 @@
             this.iconPictureBox = new System.Windows.Forms.PictureBox();
             this.GameNumberLabel = new System.Windows.Forms.Label();
             this.mainPanel = new System.Windows.Forms.Panel();
-            this.HandPanel = new System.Windows.Forms.FlowLayoutPanel();
-            this.DeckPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.buttonsPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.ShuffleButton = new System.Windows.Forms.Button();
             this.TopToBottomButton = new System.Windows.Forms.Button();
@@ -52,6 +50,8 @@
             this.PutToPanel = new System.Windows.Forms.Panel();
             this.PutToIndexTextBox = new System.Windows.Forms.NumericUpDown();
             this.PutToButton = new System.Windows.Forms.Button();
+            this.HandPanel = new Carubbi.Cards.WinForms.CardSetPanel();
+            this.DeckPanel = new Carubbi.Cards.WinForms.CardSetPanel();
             this.headerPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox)).BeginInit();
             this.mainPanel.SuspendLayout();
@@ -71,7 +71,7 @@
             this.QuitButton.ForeColor = System.Drawing.Color.White;
             this.QuitButton.Location = new System.Drawing.Point(3, 788);
             this.QuitButton.Name = "QuitButton";
-            this.QuitButton.Size = new System.Drawing.Size(158, 46);
+            this.QuitButton.Size = new System.Drawing.Size(192, 46);
             this.QuitButton.TabIndex = 1;
             this.QuitButton.Text = "Quit";
             this.QuitButton.UseVisualStyleBackColor = true;
@@ -86,7 +86,7 @@
             this.StartButton.ForeColor = System.Drawing.Color.White;
             this.StartButton.Location = new System.Drawing.Point(3, 736);
             this.StartButton.Name = "StartButton";
-            this.StartButton.Size = new System.Drawing.Size(158, 46);
+            this.StartButton.Size = new System.Drawing.Size(192, 46);
             this.StartButton.TabIndex = 0;
             this.StartButton.Tag = "Stopped";
             this.StartButton.Text = "Start";
@@ -100,9 +100,9 @@
             this.headerPanel.Controls.Add(this.iconPictureBox);
             this.headerPanel.Controls.Add(this.GameNumberLabel);
             this.headerPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.headerPanel.Location = new System.Drawing.Point(163, 0);
+            this.headerPanel.Location = new System.Drawing.Point(201, 0);
             this.headerPanel.Name = "headerPanel";
-            this.headerPanel.Size = new System.Drawing.Size(1257, 94);
+            this.headerPanel.Size = new System.Drawing.Size(1227, 94);
             this.headerPanel.TabIndex = 1;
             // 
             // TitleLabel
@@ -120,7 +120,7 @@
             this.iconPictureBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.iconPictureBox.BackgroundImage = global::Carubbi.Cards.Test.UI.Properties.Resources.cards_icon;
             this.iconPictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.iconPictureBox.Location = new System.Drawing.Point(1154, 0);
+            this.iconPictureBox.Location = new System.Drawing.Point(1124, 0);
             this.iconPictureBox.Name = "iconPictureBox";
             this.iconPictureBox.Size = new System.Drawing.Size(103, 94);
             this.iconPictureBox.TabIndex = 0;
@@ -132,7 +132,7 @@
             this.GameNumberLabel.BackColor = System.Drawing.Color.Transparent;
             this.GameNumberLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GameNumberLabel.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.GameNumberLabel.Location = new System.Drawing.Point(981, 47);
+            this.GameNumberLabel.Location = new System.Drawing.Point(951, 47);
             this.GameNumberLabel.Name = "GameNumberLabel";
             this.GameNumberLabel.Size = new System.Drawing.Size(167, 44);
             this.GameNumberLabel.TabIndex = 3;
@@ -143,37 +143,13 @@
             this.mainPanel.BackgroundImage = global::Carubbi.Cards.Test.UI.Properties.Resources.bg;
             this.mainPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.mainPanel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.mainPanel.Controls.Add(this.HandPanel);
             this.mainPanel.Controls.Add(this.DeckPanel);
+            this.mainPanel.Controls.Add(this.HandPanel);
             this.mainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.mainPanel.Location = new System.Drawing.Point(163, 94);
+            this.mainPanel.Location = new System.Drawing.Point(201, 94);
             this.mainPanel.Name = "mainPanel";
-            this.mainPanel.Size = new System.Drawing.Size(1257, 743);
+            this.mainPanel.Size = new System.Drawing.Size(1227, 743);
             this.mainPanel.TabIndex = 2;
-            // 
-            // HandPanel
-            // 
-            this.HandPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.HandPanel.AutoScroll = true;
-            this.HandPanel.BackColor = System.Drawing.Color.DarkGreen;
-            this.HandPanel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.HandPanel.Location = new System.Drawing.Point(656, 31);
-            this.HandPanel.Name = "HandPanel";
-            this.HandPanel.Size = new System.Drawing.Size(545, 655);
-            this.HandPanel.TabIndex = 4;
-            // 
-            // DeckPanel
-            // 
-            this.DeckPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.DeckPanel.AutoScroll = true;
-            this.DeckPanel.BackColor = System.Drawing.Color.DarkGreen;
-            this.DeckPanel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.DeckPanel.Location = new System.Drawing.Point(62, 31);
-            this.DeckPanel.Name = "DeckPanel";
-            this.DeckPanel.Size = new System.Drawing.Size(548, 655);
-            this.DeckPanel.TabIndex = 3;
             // 
             // buttonsPanel
             // 
@@ -193,7 +169,7 @@
             this.buttonsPanel.FlowDirection = System.Windows.Forms.FlowDirection.BottomUp;
             this.buttonsPanel.Location = new System.Drawing.Point(0, 0);
             this.buttonsPanel.Name = "buttonsPanel";
-            this.buttonsPanel.Size = new System.Drawing.Size(163, 837);
+            this.buttonsPanel.Size = new System.Drawing.Size(201, 837);
             this.buttonsPanel.TabIndex = 3;
             // 
             // ShuffleButton
@@ -205,7 +181,7 @@
             this.ShuffleButton.ForeColor = System.Drawing.Color.White;
             this.ShuffleButton.Location = new System.Drawing.Point(3, 684);
             this.ShuffleButton.Name = "ShuffleButton";
-            this.ShuffleButton.Size = new System.Drawing.Size(158, 46);
+            this.ShuffleButton.Size = new System.Drawing.Size(192, 46);
             this.ShuffleButton.TabIndex = 2;
             this.ShuffleButton.Tag = "Started";
             this.ShuffleButton.Text = "Shuffle";
@@ -221,7 +197,7 @@
             this.TopToBottomButton.ForeColor = System.Drawing.Color.White;
             this.TopToBottomButton.Location = new System.Drawing.Point(3, 632);
             this.TopToBottomButton.Name = "TopToBottomButton";
-            this.TopToBottomButton.Size = new System.Drawing.Size(158, 46);
+            this.TopToBottomButton.Size = new System.Drawing.Size(192, 46);
             this.TopToBottomButton.TabIndex = 3;
             this.TopToBottomButton.Tag = "Started";
             this.TopToBottomButton.Text = "Get From Top";
@@ -237,7 +213,7 @@
             this.BottomToBottomButton.ForeColor = System.Drawing.Color.White;
             this.BottomToBottomButton.Location = new System.Drawing.Point(3, 580);
             this.BottomToBottomButton.Name = "BottomToBottomButton";
-            this.BottomToBottomButton.Size = new System.Drawing.Size(158, 46);
+            this.BottomToBottomButton.Size = new System.Drawing.Size(192, 46);
             this.BottomToBottomButton.TabIndex = 4;
             this.BottomToBottomButton.Tag = "Started";
             this.BottomToBottomButton.Text = "Get From Bottom";
@@ -253,7 +229,7 @@
             this.GetRandomButton.ForeColor = System.Drawing.Color.White;
             this.GetRandomButton.Location = new System.Drawing.Point(3, 528);
             this.GetRandomButton.Name = "GetRandomButton";
-            this.GetRandomButton.Size = new System.Drawing.Size(158, 46);
+            this.GetRandomButton.Size = new System.Drawing.Size(192, 46);
             this.GetRandomButton.TabIndex = 5;
             this.GetRandomButton.Tag = "Started";
             this.GetRandomButton.Text = "Get Random";
@@ -266,7 +242,7 @@
             this.GetFromPanel.Controls.Add(this.GetFrom);
             this.GetFromPanel.Location = new System.Drawing.Point(3, 476);
             this.GetFromPanel.Name = "GetFromPanel";
-            this.GetFromPanel.Size = new System.Drawing.Size(158, 46);
+            this.GetFromPanel.Size = new System.Drawing.Size(192, 46);
             this.GetFromPanel.TabIndex = 7;
             // 
             // GetFromIndexTextBox
@@ -301,7 +277,7 @@
             this.PutToTopButton.ForeColor = System.Drawing.Color.White;
             this.PutToTopButton.Location = new System.Drawing.Point(3, 424);
             this.PutToTopButton.Name = "PutToTopButton";
-            this.PutToTopButton.Size = new System.Drawing.Size(158, 46);
+            this.PutToTopButton.Size = new System.Drawing.Size(192, 46);
             this.PutToTopButton.TabIndex = 8;
             this.PutToTopButton.Tag = "Started";
             this.PutToTopButton.Text = "Put to top";
@@ -317,7 +293,7 @@
             this.PutToBottomButton.ForeColor = System.Drawing.Color.White;
             this.PutToBottomButton.Location = new System.Drawing.Point(3, 372);
             this.PutToBottomButton.Name = "PutToBottomButton";
-            this.PutToBottomButton.Size = new System.Drawing.Size(158, 46);
+            this.PutToBottomButton.Size = new System.Drawing.Size(192, 46);
             this.PutToBottomButton.TabIndex = 9;
             this.PutToBottomButton.Tag = "Started";
             this.PutToBottomButton.Text = "Put To Bottom";
@@ -333,7 +309,7 @@
             this.PutToRandomButton.ForeColor = System.Drawing.Color.White;
             this.PutToRandomButton.Location = new System.Drawing.Point(3, 320);
             this.PutToRandomButton.Name = "PutToRandomButton";
-            this.PutToRandomButton.Size = new System.Drawing.Size(158, 46);
+            this.PutToRandomButton.Size = new System.Drawing.Size(192, 46);
             this.PutToRandomButton.TabIndex = 10;
             this.PutToRandomButton.Tag = "Started";
             this.PutToRandomButton.Text = "Put To Random";
@@ -346,7 +322,7 @@
             this.PutToPanel.Controls.Add(this.PutToButton);
             this.PutToPanel.Location = new System.Drawing.Point(3, 268);
             this.PutToPanel.Name = "PutToPanel";
-            this.PutToPanel.Size = new System.Drawing.Size(158, 46);
+            this.PutToPanel.Size = new System.Drawing.Size(192, 46);
             this.PutToPanel.TabIndex = 8;
             // 
             // PutToIndexTextBox
@@ -372,13 +348,38 @@
             this.PutToButton.UseVisualStyleBackColor = true;
             this.PutToButton.Click += new System.EventHandler(this.PutToButton_Click);
             // 
+            // HandPanel
+            // 
+            this.HandPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.HandPanel.BackColor = System.Drawing.Color.Transparent;
+            this.HandPanel.CardPadding = 0;
+            this.HandPanel.CardSet = null;
+            this.HandPanel.Location = new System.Drawing.Point(635, 31);
+            this.HandPanel.Name = "HandPanel";
+            this.HandPanel.Size = new System.Drawing.Size(563, 684);
+            this.HandPanel.TabIndex = 5;
+            // 
+            // DeckPanel
+            // 
+            this.DeckPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.DeckPanel.AutoScroll = true;
+            this.DeckPanel.BackColor = System.Drawing.Color.Transparent;
+            this.DeckPanel.CardPadding = 0;
+            this.DeckPanel.CardSet = null;
+            this.DeckPanel.Location = new System.Drawing.Point(22, 31);
+            this.DeckPanel.Name = "DeckPanel";
+            this.DeckPanel.Size = new System.Drawing.Size(584, 684);
+            this.DeckPanel.TabIndex = 6;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1420, 837);
+            this.ClientSize = new System.Drawing.Size(1428, 837);
             this.Controls.Add(this.mainPanel);
             this.Controls.Add(this.headerPanel);
             this.Controls.Add(this.buttonsPanel);
@@ -410,8 +411,6 @@
         private System.Windows.Forms.Label TitleLabel;
         private System.Windows.Forms.Button QuitButton;
         private System.Windows.Forms.FlowLayoutPanel buttonsPanel;
-        private System.Windows.Forms.FlowLayoutPanel HandPanel;
-        private System.Windows.Forms.FlowLayoutPanel DeckPanel;
         private System.Windows.Forms.Button ShuffleButton;
         private System.Windows.Forms.Button TopToBottomButton;
         private System.Windows.Forms.Button BottomToBottomButton;
@@ -426,6 +425,8 @@
         private System.Windows.Forms.Panel PutToPanel;
         private System.Windows.Forms.NumericUpDown PutToIndexTextBox;
         private System.Windows.Forms.Button PutToButton;
+        private WinForms.CardSetPanel DeckPanel;
+        private WinForms.CardSetPanel HandPanel;
     }
 }
 

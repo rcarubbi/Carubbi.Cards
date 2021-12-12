@@ -51,6 +51,8 @@
   <ItemGroup>
     <Compile Include="Card.cs" />
     <Compile Include="CardSet.cs" />
+    <Compile Include="CardSetActions.cs" />
+    <Compile Include="CardSetChangedEventArgs.cs" />
     <Compile Include="Deck.cs" />
     <Compile Include="Resources.pt-BR.Designer.cs">
       <DependentUpon>Resources.pt-BR.resx</DependentUpon>

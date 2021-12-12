@@ -12,14 +12,23 @@ namespace Carubbi.Cards.Test.UI
         public MainForm()
         {
             InitializeComponent();
+             
         }
-
+      
         private Game _game;
 
 
         private void StartButton_Click(object sender, EventArgs e)
         {
             _game.Start();
+           
+        }
+
+        private void CardBoxSelected(object sender, CardBox e)
+        {
+            var selectedCard = e.Card;
+            _game.TurnCard(selectedCard);
+            MessageBox.Show($"Turned Card : {selectedCard.CompleteName}");
         }
 
         private void RefreshPanel(Panel panel, GameStates state)
@@ -41,53 +50,29 @@ namespace Carubbi.Cards.Test.UI
             panel.Visible = true;
         }
 
-        private void RefreshPanel(Panel panel, CardSet cardset)
-        {
+    
 
-            SuspendLayout();
-            
-            panel.SuspendLayout();
-            
-            panel.Controls.Clear();
-            
-
-            foreach (var card in cardset)
-            {
-                var cardImage = new CardBox { Card = card };
-                 
-                cardImage.Click += CardImage_Click;
-                panel.Controls.Add(cardImage);
-              
-            }
-         
-            panel.ResumeLayout();
-            ResumeLayout();
-            panel.Visible = true;
-        }
-
-        private void CardImage_Click(object sender, EventArgs e)
-        {
-            var selectedCard = ((CardBox)sender).Card;
-            _game.TurnCard(selectedCard);
-            MessageBox.Show($"Turned Card : {selectedCard.CompleteName}");
-        }
+        
 
         private void _game_PropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
         {
             switch (e.PropertyName)
             {
-                case nameof(_game.Deck):
-                    RefreshPanel(DeckPanel, _game.Deck);
-                    break;
-                case nameof(_game.Hand):
-                    RefreshPanel(HandPanel, _game.Hand);
-                    break;
                 case nameof(_game.GameNumber):
                     GameNumberLabel.Text = _game.GameNumber;
                     break;
                 case nameof(_game.State):
                     RefreshPanel(buttonsPanel, _game.State);
                     break;
+                case nameof(_game.Deck):
+                    DeckPanel.CardSet = _game.Deck;
+                    DeckPanel.CardBoxSelected += CardBoxSelected;
+                    break;
+                case nameof(_game.Hand):
+                    HandPanel.CardSet = _game.Hand;
+                    HandPanel.CardBoxSelected += CardBoxSelected;
+                    break;
+
             }
         }
 
@@ -157,5 +142,7 @@ namespace Carubbi.Cards.Test.UI
             RefreshPanel(buttonsPanel, _game.State);
             _game.PropertyChanged += _game_PropertyChanged;
         }
+
+       
     }
 }
